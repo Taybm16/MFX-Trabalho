@@ -1,0 +1,25 @@
+
+#navbar{
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+}
+#icones{
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+span{
+    display: none;
+}
+&:hover{
+    span{
+        display: block;
+    }
+}
+}
+.icones-navbar{
+    background-color: blue;
+    color: aliceblue;
+}
