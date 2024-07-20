@@ -12,7 +12,7 @@ function Navbar(){
                 
                 <button  > <FontAwesomeIcon icon={faEnvelope} /> <span>Home</span> </button>
                 <button ><FontAwesomeIcon icon={faHeartCirclePlus} /> <span>Livraria</span></button>
-                <button ><span>Favoritos</span></button>
+                <button ><FontAwesomeIcon icon={faHeartCirclePlus} /><span>Favoritos</span></button>
                 <button ><span>Ebooks</span></button>
                 <button ><span>Portfolios</span></button>
                 <button ><span>Login</span></button>
