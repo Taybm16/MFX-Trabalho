@@ -18,8 +18,8 @@ function Navbar(){
                 <button ><FontAwesomeIcon icon={faCircleUser} /><span>Login</span></button>
                 <button ><FontAwesomeIcon icon={faCartShopping} /><span>Carrinho</span></button>
                 
-                
-                
+
+                 
             </div>
         </nav>
         
