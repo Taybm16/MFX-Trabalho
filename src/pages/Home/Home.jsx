@@ -1,13 +1,14 @@
 import Navbar from "../../components/Navbar/Navbar";
-
+import QuemSomos from "../../components/QuemSomos/QuemSomos"
 
 function Home(){
 
     return(
-        <div>
+        <>
             <Navbar/>
+            <QuemSomos/>
             
-        </div>
+        </>
         
         
     )
