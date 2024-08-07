@@ -2,49 +2,54 @@
 import ReactDOM from 'react-dom/client'
 import Home from './pages/Home/Home'
 import "./main.css"
-import AddConteudos from './pages/AddConteudos'
-import AddConteudos from './pages/AddDeConteudosCriador'
-import Carrinho from './pages/Carrinho'
-import Clientes from './pages/Clientes'
-import ConteudosPostados from './pages/ConteudosPostados'
-import ConteudosPostadosCriador from './pages/ConteudosPostadosCriador'
-import EsqueceMinhaSenha from './pages/EsqueciMinhaSenha'
-import HomeAdmin from './pages/HomeAdmin'
-import HomeCriadorDeConteudo from './pages/HomeCriadorDeConteudo'
-import Login from './pages/Login'
-import MeusPedidos from './pages/MeusPedidos'
-import Pedidos from './pages/Pedidos'
-import Perfil from './pages/Perfil'
-import PerfilAdm from './pages/PerfilAdm'
-import ProdutoresDeConteudoRelatorio from './pages/ProdutoresDeConteudoRelatorio'
-import Registro from './pages/Registro'
-
-
+import AddConteudos from './pages/AddConteudos/AddConteudos'
+import AddConteudosCriador from './pages/AddConteudosCriador/AddConteudosCriador'
+import Carrinho from './pages/Carrinho/Carrinho'
+import Clientes from './pages/Clientes/Clientes'
+import ConteudosPostados from './pages/ConteudosPostados/ConteudosPostados'
+import ConteudosPostadosCriador from './pages/ConteudosPostadosCriador/ConteudosPostadosCriador'
+import EsqueceMinhaSenha from './pages/EsqueciMinhaSenha/EsqueciMinhaSenha'
+import HomeAdmin from './pages/HomeAdmin/HomeAdmin'
+import HomeCriadorDeConteudo from './pages/HomeCriadorDeConteudos/HomeCriadorDeConteudos'
+import LoginPage from './pages/LoginPage/LoginPage'
+import MeusPedidos from './pages/MeusPedidos/MeusPedidos'
+import Pedidos from './pages/Pedidos/Pedidos'
+import Perfil from './pages/Perfil/Perfil'
+import PerfilAdm from './pages/PerfilAdm/PerfilAdm'
+import ProdutoresDeConteudoRelatorio from './pages/ProdutoresDeConteudoRelatorio/ProdutoresDeConteudoRelatorio'
+import Registro from './pages/Registro/Registro'
+import{BrowserRouter, Route, Routes} from "react-router-dom"
+import Livraria from './pages/Livraria/Livraria'
+import Favoritos from './pages/Favoritos/Favoritos'
+import Ebooks from './pages/Ebooks/Ebooks'
+import Portfolios from './pages/Portfolios/Portfolios'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     <BrowserRouter>
       <Routes>
-        <Route path="" element={<Home/>} />
-        <Route path="/" element={<AddConteudos/>}/>
-        <Route path="/" element={<AddConteudosCriador/>}/>
-        <Route path="/" element={<Carrinho/>}/>
-        <Route path="/" element={<Clientes/>}/>
-        <Route path="/" element={<ConteudosPostados/>}/>
-        <Route path="/" element={<ConteudosPostadosCriador/>}/>
-        <Route path="/" element={<EsqueceMinhaSenha/>}/>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/" element={<HomeAdmin/>}/>
-        <Route path="/" element={<HomeCriadorDeConteudo/>}/>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/" element={<MeusPedidos/>}/>
-        <Route path="/" element={<Pedidos/>}/>
-        <Route path="/" element={<Perfil/>}/>
-        <Route path="/" element={<PerfilAdm/>}/>
-        <Route path="/" element={<ProdutoresDeConteudoRelatorio/>}/>
-        <Route path="/" element={<Registro/>}/>
-
+        <Route path="/" element={<Home/>} />
+        <Route path="/AddConteudos" element={<AddConteudos/>}/>
+        <Route path="/AddConteudosCriador" element={<AddConteudosCriador/>}/>
+        <Route path="/Carrinho" element={<Carrinho/>}/>
+        <Route path="/Clientes" element={<Clientes/>}/>
+        <Route path="/ConteudosPostados" element={<ConteudosPostados/>}/>
+        <Route path="/ConteudosPostadosCriador" element={<ConteudosPostadosCriador/>}/>
+        <Route path="/EsqueceMinhaSenha" element={<EsqueceMinhaSenha/>}/>
+        <Route path="/HomeAdmin" element={<HomeAdmin/>}/>
+        <Route path="/HomeCriadorDeConteudo" element={<HomeCriadorDeConteudo/>}/>
+        <Route path="/LoginPage" element={<LoginPage/>}/>
+        <Route path="/MeusPedidos" element={<MeusPedidos/>}/>
+        <Route path="/Pedidos" element={<Pedidos/>}/>
+        <Route path="/Perfil" element={<Perfil/>}/>
+        <Route path="/PerfilAdm" element={<PerfilAdm/>}/>
+        <Route path="/ProdutoresDeConteudoRelatorio" element={<ProdutoresDeConteudoRelatorio/>}/>
+        <Route path="/Registro" element={<Registro/>}/>
+        <Route path="/Livraria" element={<Livraria/>}/>
+        <Route path="/Favoritos" element={<Favoritos/>}/>
+        <Route path="/Ebooks" element={<Ebooks/>}/>
+        <Route path="/Portfolios" element={<Portfolios/>}/>
         
       </Routes>
     </BrowserRouter>

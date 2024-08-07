@@ -23,4 +23,4 @@ function HomeAdmin () {
 
 // exportação
 
-export default HomeAdmin
+export default HomeAdmin;

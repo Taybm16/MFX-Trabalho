@@ -3,7 +3,8 @@ import "./QuemSomos.css"
 function QuemSomos(){
     return(
         <>
-        <h2>
+       <div>
+       <p>
             Quem Somos:
                 Bem-vindo à Nerd House, o seu refúgio de conteúdo! 
 
@@ -32,7 +33,8 @@ function QuemSomos(){
 
                 Quer você esteja procurando por novos conhecimentos, entretenimento de qualidade, ou um local para compartilhar suas criações, a Nerd House é o seu destino. Junte-se à nossa comunidade hoje mesmo e faça parte de um movimento que valoriza o poder do conteúdo.
 
-</h2>
+    </p>
+       </div>
         </>
         
 

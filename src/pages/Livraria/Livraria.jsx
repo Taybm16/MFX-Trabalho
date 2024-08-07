@@ -2,8 +2,11 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-function Pedidos() {
-  return <div />;
+function Livraria() {
+  return 
+  <>
+  
+  </>;
 }
 
-export default Pedidos;
+export default Livraria;

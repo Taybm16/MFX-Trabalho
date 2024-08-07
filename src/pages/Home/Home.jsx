@@ -1,12 +1,16 @@
 import Navbar from "../../components/Navbar/Navbar";
 import QuemSomos from "../../components/QuemSomos/QuemSomos"
+import  "./Home.css"
 
 function Home(){
-
+    
     return(
         <>
-            <Navbar/>
-            <QuemSomos/>
+            
+            <div className="homecomponentes">
+                <Navbar/>
+                <QuemSomos/> 
+            </div>
             
         </>
         

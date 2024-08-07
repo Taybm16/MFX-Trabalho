@@ -2,8 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-function Pedidos() {
+function Portfolios() {
   return <div />;
 }
 
-export default Pedidos;
+export default Portfolios;

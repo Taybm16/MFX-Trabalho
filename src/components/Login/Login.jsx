@@ -1,7 +1,8 @@
 import React from "react";
-// Quero instalar icones FaUser e Falock para local de emai e senha
+// Quero instalar icones FaUser e Falock para local de email e senha
 import { useState } from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () =>{
 
@@ -22,19 +23,20 @@ const Login = () =>{
                     />  
                 </div>
                 <div>
-                    <input type="senha" placeholder="Senha"/>
+                    <input type="senha" placeholder="Senha"
                     onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
                 <div className="recall-forget">
                     <label>
                         <input type="checkbox" />
                         Lembre de mim
                     </label>
-                    <a href="#">Esqueceu a senha?</a>
+                    <Link to={"/EsqueciMinhaSenha"}>Esqueceu a senha?</Link>
                 </div>
                 <button>Entrar</button>
                 <div className="signup-link">
-                    <p>Não tem uma conta?  <a href="#">Registrar</a></p>
+                    <p>Não tem uma conta?  <Link to={"/Registro"}>Registrar</Link></p>
                 </div>
             </form>
         </div>

@@ -1,13 +1,13 @@
 
 #navbar{
-    background-color: black;
+    background-color: #0C1618;
     display:flex;
     flex-direction: column;
     width: 30%;
     height: 100vh;
 }
 #icones{
-    background-color: black;
+    background-color: #63ACBB;
     display:flex;
     flex-direction: column;
 span{
@@ -20,6 +20,12 @@ span{
 }
 }
 .icones-navbar{
-    background-color: blue;
-    color: aliceblue;
+    background-color: #0C1618;
+    color: #63ACBB;
+    
+}
+
+button{
+    width: 100%;
+    height: 30px;
 }
