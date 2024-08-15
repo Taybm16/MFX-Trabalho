@@ -1,0 +1,52 @@
+
+.divpai{
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 35px;
+}
+
+.divfilho2 .input-field{
+    position: relative ;
+    width: 100%;
+    height: 40px;
+    margin: 20px;
+
+}
+.divfilho2 h1{
+    text-align: center;
+    font-size: 30px;
+    color: #63ACBB;
+    
+  }
+
+.input-field input{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #63ACBB;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #0C1618;
+    padding: 20px 50px ;
+  
+  }
+
+  .input-field input::placeholder{
+    color: #0C1618;
+   
+  }
+
+ .botões{
+   padding: 20px;
+   display: flex;
+   align-items:normal;
+   justify-content: space-between;
+   
+
+    
+  }
+  
+ 

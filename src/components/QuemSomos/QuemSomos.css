@@ -1,0 +1,33 @@
+
+.container{
+    color: #63ACBB;
+    
+    
+}
+
+h1{
+    text-align: center;
+    margin:50px;
+    font-weight: 600;
+    width: 450px;
+    height: fit-content;
+    width: fit-content;
+}
+
+
+h2{
+    text-align: center;
+    margin:0px;
+    font-weight: 500;
+    
+}
+
+h3{
+    margin: 20px;
+    font-weight: 200;
+}
+
+h4{
+    margin:50px;
+    font-weight: 400;
+}

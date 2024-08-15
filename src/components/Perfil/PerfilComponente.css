@@ -1,0 +1,57 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    background-color: #254E56;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 330px;
+    margin-top: 80px;
+}
+
+.container .profile-form .section h3 {
+    font-size: 18px;
+    background-color: #254E56;
+}
+
+.section {
+   background-color: #254E56;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #61c2c6;
+    color: #0C1618;
+    text-decoration: none;
+}
+
+.inline-inputs {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.inline-inputs input {
+    flex: 1;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #61c2c6;
+    border: none;
+    border-radius: 5px;
+    color: #0C1618;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color:#254E56;
+}

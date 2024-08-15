@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-shadow: #0C1618 1px 1px;
+  min-height: 3vh;
+}
+
+.containerpai{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 150px;
+  
+  
+}
+
+
+
+.containerfilho2 {
+
+  border-radius: 40px ;
+  border: 1px  ;
+  width: 450px;
+  padding: 25px;
+  text-shadow: none;
+
+
+}
+
+.containerfilho2 h1{
+  text-align: center;
+  font-size: 30px;
+  color: #63ACBB;
+  
+}
+
+.containerfilho2 .input-field{
+  position: relative ;
+  width: 100%;
+  height: 50px;
+  margin: 20px auto;
+
+
+}
+.input-field input{
+  width: 100%;
+  height: 100%;
+  background-color: #63ACBB;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #0C1618;
+  padding: 20px 50px ;
+
+}
+
+.input-field input::placeholder{
+  color: #0C1618;
+ 
+}
+
+.containerfilho2 .recall-forget{
+  display: flex;
+  color: #63ACBB;
+  justify-content: space-between;
+  margin: 10px  0  15px;
+  
+}
+
+.recall-forget a,
+.signup-link p a{
+  color:#63ACBB;
+  text-decoration: none;
+
+}
+
+.recall-forget a:hover,
+.signup-link p a:hover{
+  text-decoration: underline;
+
+}
+.containerfilho2 button{
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #63ACBB;
+  border-color: #0C1618;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 250px;
+  
+}
+
+.containerfilho2 .signup-link{
+  color: #63ACBB;
+  font-size: 15px;
+  text-align: center;
+  margin: 20px 0 10px;
+
+}
+  

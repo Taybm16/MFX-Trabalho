@@ -10,7 +10,6 @@ function Navbar(){
            <img src={NerdHouse} alt="" />
             <div id = "icones">
                 <Link to={"/"}><button  > <FontAwesomeIcon icon={faEnvelope} /> <span>Home</span> </button></Link>
-                
                 <Link to={"/Livraria"}><button ><FontAwesomeIcon icon={faBook} /><span>Livraria</span></button></Link>
                 <Link to={"/Favoritos"}><button ><FontAwesomeIcon icon={faHeartCirclePlus} /><span>Favoritos</span></button></Link>
                 <Link to={"/Ebooks"}><button ><FontAwesomeIcon icon={faTabletScreenButton} /> <span>Ebooks</span></button></Link>
