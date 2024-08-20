@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
-    background-color: #0C1618;
+    
+    
     
 }
 
+body{
+    background-color: #0C1618;
+}

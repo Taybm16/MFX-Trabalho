@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 function Perfil(){
     
     return(
-       <div className="Perfil-page">
+       <div className="perfilPage">
        <Navbar/>
        <PerfilComponente/>
        </div> 

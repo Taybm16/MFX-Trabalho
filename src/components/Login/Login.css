@@ -1,15 +1,12 @@
-*{
-  margin: 0;
-  padding: 0;
-  text-shadow: #0C1618 1px 1px;
-  min-height: 3vh;
-}
+
+ 
 
 .containerpai{
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 150px;
+  background-color: #0C1618;
   
   
 }
@@ -23,6 +20,7 @@
   width: 450px;
   padding: 25px;
   text-shadow: none;
+
 
 
 }

@@ -1,17 +1,23 @@
-
 .container{
     color: #63ACBB;
+    width: 100%;
+    margin: 0px 50px;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 15px solid #63ACBB;
+    margin-top: 250px;
+    
     
     
 }
 
 h1{
     text-align: center;
-    margin:50px;
     font-weight: 600;
-    width: 450px;
-    height: fit-content;
-    width: fit-content;
+    margin-top: 50px;
+
+
 }
 
 
