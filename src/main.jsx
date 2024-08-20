@@ -23,6 +23,8 @@ import Livraria from './pages/Livraria/Livraria'
 import Favoritos from './pages/Favoritos/Favoritos'
 import Ebooks from './pages/Ebooks/Ebooks'
 import Portfolios from './pages/Portfolios/Portfolios'
+import PedidosAdmin from './pages/PedidosAdmin/PedidosAdmin'
+import CentralProdutoresDeConteudo from './pages/CentralProdutoresDeConteudo/CentralProdutoresDeConteudo'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -50,6 +52,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Favoritos" element={<Favoritos/>}/>
         <Route path="/Ebooks" element={<Ebooks/>}/>
         <Route path="/Portfolios" element={<Portfolios/>}/>
+        <Route path='/AcompanhamentoPedidos' element={<PedidosAdmin/>}/>
+        <Route path='/CentralProdutoresDeConteudo' element={<CentralProdutoresDeConteudo/>}/>
         
       </Routes>
     </BrowserRouter>
