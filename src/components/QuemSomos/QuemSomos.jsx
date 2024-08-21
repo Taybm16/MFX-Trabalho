@@ -4,7 +4,6 @@ function QuemSomos(){
     return(
         <>
        <div className="container">
-       <p>
            <h1>Quem Somos:</h1> 
 
                 <h3>
@@ -64,8 +63,6 @@ function QuemSomos(){
                 Quer você esteja procurando por novos conhecimentos, entretenimento de qualidade, ou um local para compartilhar suas criações, a Nerd House é o seu destino. Junte-se à nossa comunidade hoje mesmo e faça parte de um movimento que valoriza o poder do conteúdo.
                 </h3>
                 
-
-    </p>
        </div>
         </>
         
