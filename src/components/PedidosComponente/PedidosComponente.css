@@ -1,0 +1,42 @@
+.PedidosComponentePai {
+
+    background-color: #63ACBB;
+    border-radius: 5%;
+    width: 100%;
+    padding: 25px;
+    margin: 40px;
+
+    h2{
+        text-align: start;
+        text-transform: uppercase;
+
+    }
+    p{
+        margin: 10px 0px;
+        text-transform: uppercase;
+    }
+    .status{
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+
+}
+
+.produto{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    img{
+        width: 100px;
+    }
+    h3{
+        margin: 0px;
+        font-weight: 900;
+    }
+    p{
+        font-size: 12px;
+        width: 300px;
+    }
+}
