@@ -1,0 +1,63 @@
+
+.PerfilLojaPai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #254E56;
+    border-radius: 15px;
+    padding: 40px;
+    margin: 100px;
+    margin-top: 100px;
+    
+}
+
+.PerfilLojaPai .PerfilLojaForm .PerfilLojaInputs h3 {
+    font-size: 18px;
+    background-color: #254E56;
+    
+}
+
+.PerfilLoja1 {
+   background-color: #254E56;
+}
+.PerfilLojaForm{
+    width: 100%;
+}
+
+.PerfilLojaForm input {
+    
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #61c2c6;
+    color: #0C1618;
+    text-decoration: none;
+}
+
+.PerfilLojaInputs {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.PerfilLojaInputs input {
+    flex: 1;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #61c2c6;
+    border: none;
+    border-radius: 5px;
+    color: #0C1618;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color:#254E56;
+}

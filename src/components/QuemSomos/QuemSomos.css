@@ -1,0 +1,39 @@
+.container{
+    color: #63ACBB;
+    width: 100%;
+    margin: 0px 50px;
+    align-items: center;
+
+    border-radius: 10px;
+    border: 15px solid #63ACBB;
+    margin-top: 250px;
+    
+    
+    
+}
+
+h1{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 50px;
+
+
+}
+
+
+h2{
+    text-align: center;
+    margin:0px;
+    font-weight: 500;
+    
+}
+
+h3{
+    margin: 20px;
+    font-weight: 200;
+}
+
+h4{
+    margin:50px;
+    font-weight: 400;
+}
