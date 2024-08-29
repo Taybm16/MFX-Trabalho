@@ -1,22 +1,30 @@
-import './ButtonsAdmin'
 
+import NerdHouse from "../../assets/Images/Nerd-house-logo.png"
+import { Link } from 'react-router-dom';
+import './ButtonsAdmin.css'
 
 function ButtonsAdmin(){
 
     return(
-        <nav id = "ButtonsAdmin">
-           
-            <div id = "ButtonsFilhos">
-                
-                <button  > Acompanhamento de Pedidos</button>
-                <button  > Cadastro de Produto</button>
-                <button  > Central de Clientes</button>
-                <button  > Central de Produtores de Conteúdo </button>
-                <button  > Informação da Loja</button>
-
-            </div>
-        </nav>
+        <div className='ButtonsAdminPai'>
         
+            <div className='ButtonsAdminImage'>
+            <img src={NerdHouse} alt="" height={350} />
+            </div>
+            
+            <div className = "ButtonsFilhos">
+                
+                    <Link to={"/"}><button> Home </button></Link>
+                    <Link to={"/AcompanhamentoPedidos"}><button> Acompanhamento de Pedidos</button></Link>
+                    <Link to={"/AddConteudos"}><button> Cadastro de Produto</button></Link>
+                    <Link to={"/Clientes"}><button> Central de Clientes</button></Link>
+                    <Link to={"/CentralProdutoresDeConteudo"}><button> Central de Produtores de Conteúdo </button></Link>
+                    <Link to={"/PerfilAdm"}><button> Informação da Loja</button></Link>
+                    
+                
+            </div>
+        
+        </div>
         
     )
 }

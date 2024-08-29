@@ -9,9 +9,10 @@
 }
 
 #icones{
-    background-color: #63ACBB;
+    
     display:flex;
     flex-direction: column;
+    background-color: #0C1618;
 
 span{
     display: block;
@@ -33,4 +34,5 @@ button{
     height: 50px;
     color: #63ACBB;
     border-radius: 10px;
+    background-color: #0C1618;
 }

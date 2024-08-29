@@ -1,6 +1,6 @@
 //Importação
 import ButtonsAdmin from "../../components/ButtonsAdmin/ButtonsAdmin"
-import NerdHouse from "../../assets/Images/Nerd-house-logo.png"
+
 
 
 
@@ -8,16 +8,11 @@ import NerdHouse from "../../assets/Images/Nerd-house-logo.png"
 function HomeAdmin () {
     
         return (
-            <>
-                       
-            <div>
-                <img src={NerdHouse} alt="" />
-            </div>
-            <div>
-                <ButtonsAdmin/>
-            </div>
-            </>
+            <div className="HomeAdminPage">
+  
+            <ButtonsAdmin/>
 
+            </div>
         )
 }
 

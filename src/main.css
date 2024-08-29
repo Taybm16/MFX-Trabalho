@@ -3,7 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
+<<<<<<< HEAD
 
+=======
+    
+    
+>>>>>>> 2332c7eec8a4f37bf7974abe712dfae6103b662e
     
 }
 
+body{
+    background-color: #0C1618;
+}
