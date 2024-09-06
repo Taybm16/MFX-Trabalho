@@ -12,16 +12,13 @@ x - cálculo do preço total dos itens inseridos
 
 todo - FUNCIONALIDADE EXTRA: aplicação de cupom de desconto
 */
-import './styles.scss';
+import './style.css';
 
-import PageHeader from './layout/PageHeader';
-import PageTitle from './layout/PageTitle';
 import Summary from './Summary';
 import TableRow from './TableRow';
 import { useState } from 'react';
 
 import {api} from './provider'
-import axios from 'axios'
 
 function radomNumber(min, max) {
   return Math.floor(Math.random() * (max-min) + min);
@@ -109,9 +106,9 @@ function App() {
 
 return (
     <>
-    <PageHeader />
+  
     <main>
-        <PageTitle data={'Seu carrinho'} />
+    
         <div classeName='content'>
           <section>
             <button onClick={handleAddItem} style={{padding: '5px 10px', marginBottom: 15 }}>add to cart</button>
@@ -165,4 +162,4 @@ function randomNumber(min, max) {
     return Math.floor()
 }
 
-export default PageHeader;
+export default App;

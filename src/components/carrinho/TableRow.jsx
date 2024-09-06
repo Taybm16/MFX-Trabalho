@@ -38,3 +38,5 @@ const TableRow = ({data, handleRemoveItem, handleUpdateItem}) => {
         </tr>
     );
 }
+
+export default TableRow

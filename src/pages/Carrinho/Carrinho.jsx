@@ -1,10 +1,13 @@
 import Navbar from "../../components/Navbar/Navbar";
+import App from "../../components/carrinho/carrinho";
 
 function Carrinho(){
     return(
-       <>
-       <Navbar/>
-       </> 
+       <div>
+        <Navbar/>
+        <App/>
+       </div>
+        
     )
 }
 
