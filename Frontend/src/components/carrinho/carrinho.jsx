@@ -111,7 +111,7 @@ return (
     
         <div classeName='content'>
           <section>
-            <button onClick={handleAddItem} style={{padding: '5px 10px', marginBottom: 15 }}>add to cart</button>
+            <button className='botaoCarrinho' onClick={handleAddItem} style={{padding: '5px 10px', marginBottom: 15 }}>add to cart</button>
             <table>
               <thead>
                 <tr>
