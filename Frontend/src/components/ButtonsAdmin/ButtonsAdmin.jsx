@@ -18,7 +18,6 @@ function ButtonsAdmin(){
                     <Link to={"/AcompanhamentoPedidos"}><button> Acompanhamento de Pedidos</button></Link>
                     <Link to={"/AddConteudos"}><button> Cadastro de Produto</button></Link>
                     <Link to={"/Clientes"}><button> Central de Clientes</button></Link>
-                    <Link to={"/CentralProdutoresDeConteudo"}><button> Central de Produtores de Conteúdo </button></Link>
                     <Link to={"/PerfilAdm"}><button> Informação da Loja</button></Link>
                     
                 

@@ -1,7 +1,7 @@
 import ButtonsCriador from "../../components/ButtonsCriadorConteudo/ButtonsCriadorConteudo";
 
 
-function HomeCriadorDeConteudos(){
+function HomeCliente(){
     return(
        <>
        <ButtonsCriador/>
@@ -16,4 +16,4 @@ function HomeCriadorDeConteudos(){
 
 
 
-export default HomeCriadorDeConteudos;
+export default HomeCliente;
