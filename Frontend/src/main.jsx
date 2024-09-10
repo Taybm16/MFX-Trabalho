@@ -22,7 +22,6 @@ import{BrowserRouter, Route, Routes} from "react-router-dom"
 import Livraria from './pages/Livraria/Livraria'
 
 import Ebooks from './pages/Ebooks/Ebooks'
-import Portfolios from './pages/Portfolios/Portfolios'
 import PedidosAdmin from './pages/PedidosAdmin/PedidosAdmin'
 
 
@@ -51,7 +50,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Livraria" element={<Livraria/>}/>
         
         <Route path="/Ebooks" element={<Ebooks/>}/>
-        <Route path="/Portfolios" element={<Portfolios/>}/>
+        
         <Route path='/AcompanhamentoPedidos' element={<PedidosAdmin/>}/>
         
         

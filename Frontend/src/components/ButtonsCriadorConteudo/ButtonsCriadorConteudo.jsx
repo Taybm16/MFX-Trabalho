@@ -15,7 +15,7 @@ function ButtonsCriador(){
             
             <Link to={"/"}><button> Home </button></Link> 
             <Link to={"/Perfil"}><button> Informações do Perfil</button></Link>
-            
+            <Link to={"/MeusPedidos"}><button >Meus pedidos</button></Link>
             <Link to={""}><button> Excluir Perfil</button></Link>
 
             </div>
