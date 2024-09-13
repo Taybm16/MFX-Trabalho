@@ -5,7 +5,7 @@ function Carrinho(){
     return(
        <div>
         <Navbar/>
-        <App/>
+        
        </div>
         
     )

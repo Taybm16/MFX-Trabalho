@@ -9,7 +9,7 @@ function QuemSomos(){
                 <h3>
                 Bem-vindo à Nerd House, o seu refúgio de conteúdo! 
                 
-                Na Nerd House, acreditamos que o conhecimento e a criatividade são forças transformadoras. Nosso site é um ponto de encontro para entusiastas de todos os tipos, oferecendo uma plataforma única onde você pode tanto consumir quanto produzir conteúdo de alta qualidade.
+                Na Nerd House, acreditamos que a leitura é uma das formas mais poderosas de transformar mentes e abrir novos horizontes. Nosso site oferece uma plataforma acessível e acolhedora para amantes de livros e eBooks de todos os tipos.
                 </h3>
 
                 <h2>
@@ -17,7 +17,7 @@ function QuemSomos(){
                 </h2>
 
                 <h3>
-                Nossa missão é empoderar criadores e consumidores de conteúdo, proporcionando um espaço dinâmico e acessível para todos. Queremos facilitar o acesso a recursos educacionais e de entretenimento, promovendo a troca de ideias e o crescimento intelectual.
+                Nossa missão é facilitar o acesso a um vasto universo de literatura e conhecimento. Queremos promover a paixão pela leitura, oferecendo livros físicos e digitais que atendem a todos os gostos, desde clássicos da literatura até os lançamentos mais recentes.
                 </h3>
 
                 <h2>
@@ -25,42 +25,27 @@ function QuemSomos(){
                 </h2>
 
                 <h3>
-                Na Nerd House, você encontra uma variedade de serviços e produtos que atendem a todas as suas necessidades de conteúdo:
+                Na Nerd House, você encontra uma variedade de produtos voltados para quem aprecia uma boa leitura:
                 </h3>
 
                 <h4>
-                Livraria: Explore uma vasta seleção de livros, desde clássicos da literatura até os mais recentes lançamentos.
+                Livraria: Explore uma vasta seleção de livros, desde os clássicos até os lançamentos mais aguardados.
                 </h4>
                 <h4>
-                Audiobooks: Desfrute de histórias narradas, perfeitas para ouvir em qualquer lugar.
+                EBooks: Tenha acesso a uma biblioteca digital completa, disponível para leitura em qualquer dispositivo.
                 </h4>
                 <h4>
-                Ebooks: Tenha acesso a uma biblioteca digital completa para ler no seu dispositivo preferido.
-                </h4>
-                <h4>
-                Portfólios: Descubra e conecte-se com criadores de conteúdo talentosos, visualizando seus trabalhos em um só lugar.
-                </h4>
-                <h4>
-                Login: Tenha acesso personalizado ao nosso site, com funcionalidades exclusivas para membros.
-                </h4>
-                <h4>
-                Carrinho: Facilite suas compras com nosso sistema de carrinho de compras integrado.
+                Carrinho: Facilite suas compras com nosso sistema de carrinho de compras integrado, garantindo uma experiência rápida e prática.
                 </h4>
                 
-                <h2>
-                Para Criadores:
-                </h2>
-
-                <h3>
-                Se você é um criador de conteúdo, a Nerd House é o lugar ideal para você. Oferecemos a possibilidade de vender seus conteúdos ou publicá-los gratuitamente, permitindo que você alcance um público maior e monetize suas criações.
-                </h3>
+            
 
                 <h2>
                 Junte-se a Nós
                 </h2>
 
                 <h3>
-                Quer você esteja procurando por novos conhecimentos, entretenimento de qualidade, ou um local para compartilhar suas criações, a Nerd House é o seu destino. Junte-se à nossa comunidade hoje mesmo e faça parte de um movimento que valoriza o poder do conteúdo.
+                Se você é apaixonado por livros, a Nerd House é o lugar ideal para encontrar suas próximas leituras favoritas. Junte-se à nossa comunidade de leitores e descubra novas histórias, conhecimentos e aventuras a cada compra.
                 </h3>
                 
        </div>

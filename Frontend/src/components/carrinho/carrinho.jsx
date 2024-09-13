@@ -16,11 +16,11 @@ import './style.css';
 
 import Summary from './Summary';
 import TableRow from './TableRow';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {api} from './provider'
 
-function radomNumber(min, max) {
+function randomNumber(min, max) {
   return Math.floor(Math.random() * (max-min) + min);
 }
 
@@ -109,7 +109,7 @@ return (
   
     <main>
     
-        <div classeName='content'>
+        <div className='content'>
           <section>
             <button className='botaoCarrinho' onClick={handleAddItem} style={{padding: '5px 10px', marginBottom: 15 }}>add to cart</button>
             <table>
@@ -158,8 +158,8 @@ return (
 
 
 
-function randomNumber(min, max) {
-    return Math.floor()
-}
+// function randomNumber(min, max) {
+//     return Math.floor()
+// }
 
 export default App;
