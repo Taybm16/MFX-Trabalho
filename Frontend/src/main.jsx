@@ -8,7 +8,7 @@ import Carrinho from './pages/Carrinho/Carrinho'
 import Clientes from './pages/Clientes/Clientes'
 import ConteudosPostados from './pages/ConteudosPostados/ConteudosPostados'
 
-import EsqueceMinhaSenha from './pages/EsqueciMinhaSenha/EsqueciMinhaSenha'
+import EsqueciMinhaSenha from './pages/EsqueciMinhaSenha/EsqueciMinhaSenha'
 import HomeAdmin from './pages/HomeAdmin/HomeAdmin'
 import HomeCliente from './pages/HomeCliente/HomeCliente'
 import LoginPage from './pages/LoginPage/LoginPage'
@@ -37,7 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/Clientes" element={<Clientes/>}/>
         <Route path="/ConteudosPostados" element={<ConteudosPostados/>}/>
         
-        <Route path="/EsqueceMinhaSenha" element={<EsqueceMinhaSenha/>}/>
+        <Route path="/EsqueciMinhaSenha" element={<EsqueciMinhaSenha/>}/>
         <Route path="/HomeAdmin" element={<HomeAdmin/>}/>
         <Route path="/HomeCliente" element={<HomeCliente/>}/>
         <Route path="/LoginPage" element={<LoginPage/>}/>

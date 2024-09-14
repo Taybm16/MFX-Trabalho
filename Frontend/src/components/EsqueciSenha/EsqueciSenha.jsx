@@ -1,10 +1,10 @@
 import React from "react";
 // Quero instalar icones FaUser e Falock para local de email e senha
 import { useState } from "react";
-import "./Login.css";
+import "./EsqueciSenha.css";
 import { Link } from "react-router-dom";
 import NerdHouse from "../../assets/Images/Nerd-house-logo.png"
-const Login = () =>{
+const EsqueciSenha = () =>{
 
     const[username,setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -15,14 +15,14 @@ const Login = () =>{
   //      console.log("Envio"); Queria fazer o envio dessa informação para o backend e encriptografar 
     }
     return(
-        <div className="containerpai">
-        <div className="containerfilho1">
+        <div className="containerEsqueciSenhaPai">
+        <div className="containerEsqueciSenhafilho1">
         <img src={NerdHouse} alt="" height={350} />
         </div>
-        <div className="containerfilho2"> 
-            <form  onSubmit={handleSubmit}>
-                <h1>Login</h1>
-                <div className="input-field">
+        <div className="containerEsqueciSenhafilho2"> 
+            <form className="formulario" onSubmit={handleSubmit}>
+                <h1>Criar nova senha</h1>
+                <div className="inputEsqueciSenha-field">
                     <input type="email" placeholder="E-mail"
                     onChange={(e) => setUsername(e.target.value)}
                     //Usamos o evento onchange ao criarmos uma função que ira pegar o evento e extrair o valor do input . 
@@ -30,28 +30,23 @@ const Login = () =>{
                     // Agora vc poderia fazer o envio desses dados com um recurso axios(chamadas asincromas)/fetch/ (backend)
                     />  
                 </div>
-                <div className="input-field">
+                <div className="inputEsqueciSenha-field">
                     <input type="senha" placeholder="Senha"
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <div className="recall-forget">
-                  <label>
-                    <input type="checkbox"/>
-                    Lembre de mim!  
-                  </label>
-                  <a href={"/EsqueciMinhaSenha"}>Esqueceu a senha?</a>         
+                <div className="inputEsqueciSenha-field">
+                    <input type="senha" placeholder="Confirmação de Senha"
+                    
+                    />
                 </div>
-                <button className="LoginBotão">Entrar</button>
                 
-                <div className="signup-link">
-                    <p>Não tem uma conta?  <Link to={"/Registro"}>Registrar</Link></p>
-                </div>
-
+                <button className="EsqueciSenhaBotão">Entrar</button>
+            
             </form>
         </div>
         </div>
     )
 }
 
-export default Login;
+export default EsqueciSenha;
