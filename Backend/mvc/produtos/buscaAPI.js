@@ -36,7 +36,6 @@ fastify.post('/livraria', async function handler(request, reply) {
 })
 
 
-
 try {
     await fastify.listen({ port: PORT })
 } catch (err) {
