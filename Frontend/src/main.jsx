@@ -13,7 +13,7 @@ import HomeAdmin from './pages/HomeAdmin/HomeAdmin'
 import HomeCliente from './pages/HomeCliente/HomeCliente'
 import LoginPage from './pages/LoginPage/LoginPage'
 import MeusPedidos from './pages/MeusPedidos/MeusPedidos'
-import Pedidos from './pages/Pedidos/Pedidos'
+
 import Perfil from './pages/Perfil/Perfil'
 import PerfilAdm from './pages/PerfilAdm/PerfilAdm'
 
@@ -42,7 +42,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/HomeCliente" element={<HomeCliente/>}/>
         <Route path="/LoginPage" element={<LoginPage/>}/>
         <Route path="/MeusPedidos" element={<MeusPedidos/>}/>
-        <Route path="/Pedidos" element={<Pedidos/>}/>
+        
         <Route path="/Perfil" element={<Perfil/>}/>
         <Route path="/PerfilAdm" element={<PerfilAdm/>}/>
         
