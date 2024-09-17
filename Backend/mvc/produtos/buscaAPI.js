@@ -21,7 +21,7 @@ fastify.post('/livraria', async function handler(request, reply) {
     let requestMax = parseFloat(request.body["max"])
     let requestName = request.body["name"]
     let filter = []
-    let lista = database([])
+    let lista = database(data)
     for (let i = 0; i < lista.length; i++) {
         if (parseFloat(lista[i].amount) >= requestMin && parseFloat(lista[i].amount) <= requestMax) {
             filter.push(lista[i])
