@@ -1,12 +1,12 @@
 //import React from 'react';
-//import CardsProdutos from '../../components/CardsProdutos/CardProdutos';
-import Navbar from "../../components/Navbar/Navbar"
-// import { Container } from './styles';
+import CardsProdutos from '../../components/CardsProdutos/CardProdutos';
+//import Navbar from "../../components/Navbar/Navbar"
+
 
 function Livraria() {
   return (
   <div>
-    <Navbar />
+    <CardsProdutos/>
     
    
   </div>
