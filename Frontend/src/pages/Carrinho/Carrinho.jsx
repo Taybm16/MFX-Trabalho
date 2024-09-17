@@ -1,10 +1,13 @@
-import Navbar from "../../components/Navbar/Navbar";
-import App from "../../components/carrinho/carrinho";
+// import Navbar from "../../components/Navbar/Navbar";
+import CarrinhoComponente from "../../components/carrinho/carrinhoComponente"
 
 function Carrinho(){
     return(
        <div>
-        <Navbar/>
+        {/* <Navbar/> */}
+        <CarrinhoComponente />
+        
+        
         
        </div>
         
