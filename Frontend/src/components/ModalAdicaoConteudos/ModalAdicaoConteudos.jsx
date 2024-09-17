@@ -1,18 +1,18 @@
 // src/components/ModalAdicao.jsx
-import React, { useState } from 'react';
-import './ModalAdicao.css'; 
+import React, {useState} from 'react';
+import "./ModalAdicao.css"
 
 const ModalAdicao = ({ isOpen, onClose, onAddProduct }) => {
-    const [productName, setProductName] = useState('');
-    const [productDescription, setProductDescription] = useState('');
+    const [productName, setProductName] = useState([]);
+    const [productDescription, setProductDescription] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         // Adiciona o produto
         onAddProduct({ name: productName, description: productDescription });
         // Limpa o formulário
-        setProductName('');
-        setProductDescription('');
+        setProductName(null);
+        setProductDescription(null);
         // Fecha o modal
         onClose();
     };
