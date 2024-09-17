@@ -6,8 +6,8 @@ import Navbar from "../../components/Navbar/Navbar"
 function Livraria() {
   return (
   <div>
-    <Navbar />
-    
+    {/* <Navbar /> */}
+    <Livraria/>
    
   </div>
   )
