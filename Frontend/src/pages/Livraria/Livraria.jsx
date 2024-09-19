@@ -6,13 +6,10 @@ import "./Livraria.css"
 function Livraria() {
   return (
   <div className='PageLivraria'>
-    <div>
+    
       <Navbar />
-    </div>
-
-    <div>
       <CardsProdutos/>
-    </div>
+    
     
    
   </div>
