@@ -4,7 +4,7 @@ import NerdHouse from "../../assets/Images/Nerd-house-logo.png"
 import "./CriarConta.css"
 
 function CriarConta() {
-    function CriarConta() {
+    
         // Estado para armazenar os valores dos campos
         const [nome, setNome] = useState('');
         const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ function CriarConta() {
         const [tipoConta, setTipoConta] = useState('');
       
         // Adicionar a lógica para enviar os dados para o servidor:
-    }
+    
     // Manipulador para alterações nos campos
     const handleChange = (event) => {
       const { name, value } = event.target;
@@ -26,11 +26,11 @@ function CriarConta() {
     // Manipulador para o envio do formulário
     const handleSubmit = (event) => {
       event.preventDefault();
-    }
+    };
   
-  return (
+return(
     
-    <div className='divpai'>
+    <div className='divCriarContaPai'>
       <div>
         {/* Colocar a logo  */}
         <img src={NerdHouse} alt="" height={350} />
@@ -65,7 +65,8 @@ function CriarConta() {
       </div>
     </div>
 
-  )
-}
+  );
+};
+
 
 export default CriarConta;

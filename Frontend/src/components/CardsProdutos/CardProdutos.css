@@ -1,0 +1,32 @@
+.CardDivPai{
+    border: 5px solid white;
+    background-color: #104b57;
+    border-radius: 15px;
+    
+}
+
+.CardDescricao{
+    text-align: center;
+    color: #63ACBB;
+    border:#63ACBB;
+    
+    
+
+}
+
+#configimgCard{
+    padding:50px;
+    
+}
+
+
+.BotoesCardProduct{
+    display: flex;
+    
+    
+}
+
+.BotoesCardProduct button{
+    background-color: #63ACBB;
+    color: #0C1618;
+}
