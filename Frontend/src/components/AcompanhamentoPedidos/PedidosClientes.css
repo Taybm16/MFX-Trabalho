@@ -1,4 +1,4 @@
-.PedidosClientesCentral {
+.PedidosClientesPai {
 
     background-color: #63ACBB;
     border-radius: 15px;
@@ -16,15 +16,12 @@
         margin: 10px 0px;
         text-transform: uppercase;
     }
-    .statusClientesCentral{
-        font-size: 12px;
-        text-transform: capitalize;
-    }
+    
 
 
 }
 
-.produtoClientesCentral{
+.produtoClientes{
     display: flex;
     align-items: center;
     gap: 25px;

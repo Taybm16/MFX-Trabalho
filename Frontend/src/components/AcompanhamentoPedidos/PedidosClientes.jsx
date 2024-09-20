@@ -1,16 +1,14 @@
 import React from 'react';
-import "./ClientesCentral.css"
+import "./PedidosClientes.css"
 import Geek from "../../assets/Images/geek.jpg"
-
-
-function ClientesCentral() {
+function PedidosClientes() {
   return (
    <>
-    <div className='PedidosClientesCentral'>
-      <h2>Relatório de Clientes da Loja</h2>
+    <div className='PedidosClientesPai'>
+      <h2>Relatório de Pedidos </h2>
       <p>Cliente:</p>
 
-      <div className='produtoClientesCentral'>
+      <div className='produtoClientes'>
         <img src={Geek} alt="" />
         <div>
           <h3>Lilian Alves Rodrigues </h3>
@@ -18,13 +16,13 @@ function ClientesCentral() {
           <p>Telefone: xxxxx-xxxxx</p>
        
         </div>
-        <span>Nome do Usuário : @Lilian </span>
+        <span>Status do Pedido: Entregue</span>
 
       </div>
-     
+      <p className='statusClientes'>Pagamento realizado via Pix</p>
     </div>
    </> 
   )
 }
 
-export default ClientesCentral;
+export default PedidosClientes;
