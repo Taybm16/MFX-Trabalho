@@ -1,0 +1,56 @@
+.carrinhoPai{
+    Border: solid #63ACBB 5px;
+    border-radius: 15px;
+    width: fit-content;
+
+}
+
+.carrinhoPai h1{
+    color: #63ACBB;
+    margin-bottom: 25px;
+}
+
+.carrinhoFilho{
+ display: flex;
+
+
+
+}
+
+.carrinhoNeto1{
+    border: solid #63ACBB 5px;
+    border-radius: 15px;
+}
+
+.carrinhoNeto2{
+    border: solid #63ACBB 5px;
+    border-radius: 15px;
+    color: #63ACBB;
+}
+
+.carrinhoDescritivo1 {
+    color: #63ACBB;
+    margin-top: 25px;
+    border-bottom: #63ACBB solid;
+    
+}
+img{
+ margin: 25px;
+}
+.carrinhoDescritivo2{
+    color: #63ACBB;
+    display: flex;
+}
+
+.carrinhoDescritivo2 button{
+    
+    background-color: #63ACBB;
+    color: #0C1618;
+    width: 80px;
+    
+}
+.carrinhoNeto2 button{
+    background-color: #63ACBB;
+    color: #0C1618;
+    
+}

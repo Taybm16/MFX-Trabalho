@@ -1,11 +1,14 @@
-// import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import CarrinhoComponente from "../../components/carrinho/carrinhoComponente"
-
+import "./Carrinho.css"
 function Carrinho(){
     return(
-       <div>
-        {/* <Navbar/> */}
+       <div className="CarrinhoPage">
+       
+        <Navbar/>
+       
         <CarrinhoComponente />
+      
         
         
         
