@@ -1,7 +1,16 @@
+.DivPaidoPai{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 .CardDivPai{
     border: 5px solid white;
     background-color: #104b57;
     border-radius: 15px;
+    width: 300px;
+    
     
 }
 
@@ -15,7 +24,9 @@
 }
 
 #configimgCard{
-    padding:50px;
+  width: 100%;
+  margin: 0 !important;
+  height: 350px;
     
 }
 

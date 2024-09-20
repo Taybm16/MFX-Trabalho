@@ -20,30 +20,32 @@ function CardsProdutos() {
     }, [PegarAPI]);
 
     return (
-        <div className='CardDivPai'>
+        <div className='DivPaidoPai'>
             {dados.map((dado) => (
-                
-                <div id='configCard' key={dado.id}> 
-                    <img id='configimgCard' src={dado.image} alt="" width={250}/>
-                
-                    <div className='CardDescricao'>
-                        <h3>{dado.title}</h3>
-                        <p>{dado.price}</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore ab error magni quae debitis, optio aut ipsam velit dignissimos ullam non odit in illum aspernatur omnis. Temporibus, et sapiente!</p>
-                    
-                        <div className='BotoesCardProduct'>
+                <div className='CardDivPai'>
 
-                        {/* <button type="button" onClick={PegarAPI}>Chamar API</button>
-           */}
-                        <button>Comprar</button>
-                        <button><FontAwesomeIcon icon={faCartShopping} /></button>
+                    <div id='configCard' key={dado.id}>
+                        <img id='configimgCard' src={dado.image} alt="" width={250} />
+
+                        <div className='CardDescricao'>
+                            <h3>{dado.title}</h3>
+                            <p>R$ {dado.price}</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore ab error magni quae debitis, optio aut ipsam velit dignissimos ullam non odit in illum aspernatur omnis. Temporibus, et sapiente!</p>
+
+                            <div className='BotoesCardProduct'>
+
+                                {/* <button type="button" onClick={PegarAPI}>Chamar API</button>
+            */}
+                                <button>Comprar</button>
+                                <button><FontAwesomeIcon icon={faCartShopping} /></button>
+                            </div>
+
                         </div>
-                    
                     </div>
+
+
                 </div>
             ))}
-            
-            
         </div>
     );
 }
