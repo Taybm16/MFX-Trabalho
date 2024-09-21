@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 import "./CardProdutos.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
@@ -33,10 +33,9 @@ function CardsProdutos() {
                     
                         <div className='BotoesCardProduct'>
 
-                        {/* <button type="button" onClick={PegarAPI}>Chamar API</button>
-           */}
+                        {/* <button type="button" onClick={PegarAPI}>Chamar API</button>*/}
                         <button>Comprar</button>
-                        <button><FontAwesomeIcon icon={faCartShopping} /></button>
+                        <button><FontAwesomeIcon icon={faCartShopping} /> </button>
                         </div>
                     
                     </div>
