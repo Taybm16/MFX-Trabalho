@@ -13,7 +13,9 @@
     
     
 }
-
+.configCard{
+    position: relative;
+}
 .CardDescricao{
     text-align: center;
     color: #63ACBB;
@@ -23,7 +25,7 @@
 
 }
 
-#configimgCard{
+.configimgCard{
   width: 100%;
   margin: 0 !important;
   height: 350px;
@@ -32,12 +34,57 @@
 
 
 .BotoesCardProduct{
-    display: flex;
-    
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
     
 }
 
 .BotoesCardProduct button{
     background-color: #63ACBB;
     color: #0C1618;
+   
 }
+
+.CardProdutosText{
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

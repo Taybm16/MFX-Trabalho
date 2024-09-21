@@ -24,13 +24,13 @@ function CardsProdutos() {
             {dados.map((dado) => (
                 <div className='CardDivPai'>
 
-                    <div id='configCard' key={dado.id}>
-                        <img id='configimgCard' src={dado.image} alt="" width={250} />
+                    <div className='configCard' key={dado.id}>
+                        <img className='configimgCard' src={dado.image} alt="" width={250} />
 
                         <div className='CardDescricao'>
-                            <h3>{dado.title}</h3>
-                            <p>R$ {dado.price}</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore ab error magni quae debitis, optio aut ipsam velit dignissimos ullam non odit in illum aspernatur omnis. Temporibus, et sapiente!</p>
+                            <h3 CardProdutosText>{dado.title}</h3>
+                            <p CardProdutosText>R$ {dado.price}</p>
+                            <p className='CardProdutosText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore ab error magni quae debitis, optio aut ipsam velit dignissimos ullam non odit in illum aspernatur omnis. Temporibus, et sapiente!</p>
 
                             <div className='BotoesCardProduct'>
 
