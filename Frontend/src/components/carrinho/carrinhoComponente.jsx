@@ -16,7 +16,7 @@ function carrinho() {
 
                 <div className='carrinhoDescritivo2'>
                     <img src="https://s5.static.brasilescola.uol.com.br/be/2023/09/capa-do-livro-o-pequeno-principe-de-antoine-de-saint-exupery-publicado-pela-faro-editorial.jpg" alt=""  width={200}/>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br></br>
+                    <h4 >Lorem ipsum dolor sit amet consectetur adipisicing elit.<br></br>
                         Dolor laborum porro magni fuga eligendi, minima, earum odio <br></br>necessitatibus qui non placeat 
                         quibusdam saepe praesentium deserunt explicabo expedita dignissimos debitis mollitia.</h4>
                     
