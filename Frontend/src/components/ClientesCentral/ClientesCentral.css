@@ -1,0 +1,44 @@
+.PedidosClientesCentral {
+
+    background-color: #63ACBB;
+    border-radius: 15px;
+    width: 100%;
+    padding: 25px;
+    margin: 40px;
+    height: fit-content;
+
+    h2{
+        text-align: start;
+        text-transform: uppercase;
+
+    }
+    p{
+        margin: 10px 0px;
+        text-transform: uppercase;
+    }
+    .statusClientesCentral{
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+
+}
+
+.produtoClientesCentral{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    img{
+        width: 100px;
+        border-radius: 15px;
+    }
+    h3{
+        margin: 0px;
+        font-weight: 900;
+    }
+    p{
+        font-size: 12px;
+        width: 300px;
+    }
+}

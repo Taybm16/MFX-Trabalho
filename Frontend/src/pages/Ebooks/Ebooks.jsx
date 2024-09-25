@@ -1,11 +1,14 @@
 //import React from 'react';
 import Navbar from "../../components/Navbar/Navbar"
-// import { Container } from './styles';
+import CardsProdutos from '../../components/CardsProdutos/CardProdutos';
+import "./Ebooks.css"
+
 
 function Ebooks() {
   return (
-  <div>
+  <div className="EbooksPage">
     <Navbar/>
+    <CardsProdutos/>
   </div>
   )
 }

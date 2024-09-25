@@ -1,17 +1,15 @@
-import ModalAdicao from "../../components/ModalAdicaoConteudos/ModalAdicaoConteudos"
+import ModalAdicaoConteudos from "../../components/ModalAdicaoConteudos/ModalAdicaoConteudos"
 import Navbar from "../../components/Navbar/Navbar";
 import "./AddConteudos.css"
 
 function AddConteudos(){
     return(
        
-        <div id="paiAdd">
-            <div>
+        <div className="paiAdd">
+            
                 <Navbar/>
-            </div>
-            <div>
-                <ModalAdicao/>
-            </div>
+                <ModalAdicaoConteudos/>
+            
         </div>
        
     )

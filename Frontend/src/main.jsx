@@ -6,7 +6,7 @@ import AddConteudos from './pages/AddConteudos/AddConteudos'
 
 import Carrinho from './pages/Carrinho/Carrinho'
 import Clientes from './pages/Clientes/Clientes'
-import ConteudosPostados from './pages/ConteudosPostados/ConteudosPostados'
+
 
 import EsqueciMinhaSenha from './pages/EsqueciMinhaSenha/EsqueciMinhaSenha'
 import HomeAdmin from './pages/HomeAdmin/HomeAdmin'
@@ -35,7 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         
         <Route path="/Carrinho" element={<Carrinho/>}/>
         <Route path="/Clientes" element={<Clientes/>}/>
-        <Route path="/ConteudosPostados" element={<ConteudosPostados/>}/>
+        
         
         <Route path="/EsqueciMinhaSenha" element={<EsqueciMinhaSenha/>}/>
         <Route path="/HomeAdmin" element={<HomeAdmin/>}/>

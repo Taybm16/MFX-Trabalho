@@ -17,7 +17,8 @@ const EsqueciSenha = () =>{
     return(
         <div className="containerEsqueciSenhaPai">
         <div className="containerEsqueciSenhafilho1">
-        <img src={NerdHouse} alt="" height={350} />
+        <Link to={"/"}><button><img src={NerdHouse} alt="" height={350} title="HOME"/></button></Link>
+        
         </div>
         <div className="containerEsqueciSenhafilho2"> 
             <form className="formulario" onSubmit={handleSubmit}>

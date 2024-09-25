@@ -1,0 +1,91 @@
+.DivPaidoPai{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.CardDivPai{
+    border: 5px solid white;
+    background-color: #104b57;
+    border-radius: 15px;
+    width: 300px;
+    
+    
+}
+.configCard{
+    position: relative;
+}
+.CardDescricao{
+    text-align: center;
+    color: #63ACBB;
+    border:#63ACBB;
+    
+    
+
+}
+
+.configimgCard{
+  width: 100%;
+  margin: 0 !important;
+  height: 350px;
+    
+}
+
+
+.BotoesCardProduct{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    
+}
+
+.BotoesCardProduct button{
+    background-color: #63ACBB;
+    color: #0C1618;
+   
+}
+
+.CardProdutosText{
+    height: 100px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

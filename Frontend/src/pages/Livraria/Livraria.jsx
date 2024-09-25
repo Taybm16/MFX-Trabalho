@@ -1,13 +1,16 @@
 //import React from 'react';
-//import CardsProdutos from '../../components/CardsProdutos/CardProdutos';
+import CardsProdutos from '../../components/CardsProdutos/CardProdutos';
 import Navbar from "../../components/Navbar/Navbar"
-// import { Container } from './styles';
+import "./Livraria.css"
 
 function Livraria() {
   return (
-  <div>
-    {/* <Navbar /> */}
-    <Livraria/>
+  <div className='PageLivraria'>
+    
+      <Navbar />
+      <CardsProdutos/>
+    
+    
    
   </div>
   )
