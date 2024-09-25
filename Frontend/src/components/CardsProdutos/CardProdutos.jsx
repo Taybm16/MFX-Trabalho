@@ -22,20 +22,19 @@ function CardsProdutos() {
     return (
         <div className='DivPaidoPai'>
             {dados.map((dado) => (
-                <div className='CardDivPai'>
+                <div className='CardDivPai' key={dado.id}>
 
-                    <div className='configCard' key={dado.id}>
+                    <div className='configCard'>
                         <img className='configimgCard' src={dado.image} alt="" width={250} />
 
                         <div className='CardDescricao'>
-                            <h3 CardProdutosText>{dado.title}</h3>
-                            <p CardProdutosText>R$ {dado.price}</p>
-                            <p className='CardProdutosText'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore ab error magni quae debitis, optio aut ipsam velit dignissimos ullam non odit in illum aspernatur omnis. Temporibus, et sapiente!</p>
+                            <h3 className='CardProdutosText'>{dado.title}</h3>
+                            <p className='CardProdutosText'> R$ {dado.price}</p>
+                            <p className='CardProdutosText'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore ab error magni quae debitis, optio aut ipsam velit dignissimos ullam non odit in illum aspernatur omnis. Temporibus, et sapiente!</p>
 
                             <div className='BotoesCardProduct'>
 
-                                {/* <button type="button" onClick={PegarAPI}>Chamar API</button>
-            */}
+                                {/* <button type="button" onClick={PegarAPI}>Chamar API</button>*/}
                                 <button>Comprar</button>
                                 <button><FontAwesomeIcon icon={faCartShopping} /></button>
                             </div>
