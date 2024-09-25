@@ -5,7 +5,7 @@ function PerfilAdm(){
     return(
       
         <div className="PerfilLojaPage">
-        
+        <Navbar/>
         <PerfilLoja/>
         </div>
        

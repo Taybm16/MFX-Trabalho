@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import NerdHouse from "../../assets/Images/Nerd-house-logo.png"
+
 const Login = () =>{
 
     const[username,setUsername] = useState("");
@@ -17,7 +18,8 @@ const Login = () =>{
     return(
         <div className="containerpai">
         <div className="containerfilho1">
-        <img src={NerdHouse} alt="" height={350} />
+        <Link to={"/"}><button><img src={NerdHouse} alt="" height={350} title="HOME"/></button></Link>
+        
         </div>
         <div className="containerfilho2"> 
             <form  onSubmit={handleSubmit}>
