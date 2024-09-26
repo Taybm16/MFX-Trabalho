@@ -1,27 +1,44 @@
-import React from 'react';
-import "./PedidosComponente.css"
-// import { Container } from './styles';
+import React, { useState, useEffect, useCallback } from 'react';
+import "./PedidosComponente.css";
 
 function PedidosComponente() {
+  const [dados, mudardados] = useState([]);
+
+  const PegarAPI = useCallback(async () => {
+    const dadosAPI = await fetch('https://fakestoreapi.com/products')
+      .then(resposta => resposta.json())
+      .then(info => info);
+
+    mudardados(dadosAPI);
+    console.log(dadosAPI);
+  }, []);
+
+  useEffect(() => {
+    PegarAPI();
+  }, [PegarAPI]);
+
   return (
-   
-    <div className='PedidosComponentePai'>
-      <h2>10 de março de 2024</h2>
-      <p>Pedido:</p>
-
-      <div className='produto'>
-        <img src="https://cdl-static.s3-sa-east-1.amazonaws.com/covers/gg/9788537814666/o-pequeno-principe-edicao-bolso-de-luxo.jpg" alt="" />
-        <div>
-          <h3>Nome de produto</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam non vero dolores nam d</p>
+    <div id='PedidosComponenteContainer'>
+      <h2>Meus Pedidos</h2>
+      {dados.map((dado) => (
+        <div className='PedidosCardComponentePai' key={dado.id}>
+          <div className='PedidosComponenteFilho'>
+            <p>Pedido:</p>
+            <h3>10 de março de 2024</h3>
+            <div className='produto'>
+              <img src={dado.image} alt="" />
+              <div>
+                <h3>{dado.title}</h3>
+                <p>{dado.description}</p>
+              </div>
+              <span>1 un - R$ {dado.price}</span>
+            </div>
+            <p className='status'>Aguardando empresa</p>
+          </div>
         </div>
-        <span>1 un - R$ 100</span>
-
-      </div>
-      <p className='status'>Aguardando empresa</p>
+      ))} 
     </div>
-   
-  )
+  );
 }
 
 export default PedidosComponente;

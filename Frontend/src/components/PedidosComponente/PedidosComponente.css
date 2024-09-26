@@ -1,4 +1,14 @@
-.PedidosComponentePai {
+#PedidosComponenteContainer{
+    width: 850px;
+}
+h2{
+    text-align: start;
+    text-transform: uppercase;
+    color: #63ACBB;
+
+}
+
+.PedidosCardComponentePai {
 
     background-color: #63ACBB;
     border-radius: 15px;
@@ -7,17 +17,13 @@
     margin: 40px;
     height: fit-content;
 
-    h2{
-        text-align: start;
-        text-transform: uppercase;
-
-    }
+    
     p{
-        margin: 10px 0px;
+        margin:5px
         text-transform: uppercase;
     }
     .status{
-        font-size: 12px;
+        font-size: 13px;
         text-transform: capitalize;
     }
 
@@ -27,19 +33,19 @@
 .produto{
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 5px;
    
 
     img{
-        width: 150px;
+        width: 100px;
     }
     h3{
-        margin: 30px;
+        margin: 20px;
         font-weight: 900;
     }
     p{
-        font-size: 12px;
+        font-size: 16px;
         width: 300px;
-        margin: 30px;
+        margin: 20px;
     }
 }

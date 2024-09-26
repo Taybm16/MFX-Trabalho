@@ -1,3 +1,9 @@
+.RelatorioCentral{
+    width: 800px;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 15px;
+}
 .PedidosClientesCentral {
 
     background-color: #63ACBB;
@@ -7,11 +13,7 @@
     margin: 40px;
     height: fit-content;
 
-    h2{
-        text-align: start;
-        text-transform: uppercase;
-
-    }
+  
     p{
         margin: 10px 0px;
         text-transform: uppercase;
@@ -23,7 +25,13 @@
 
 
 }
+h2{
+    text-align: start;
+    text-transform: uppercase;
+     margin-top: 35px;
+    color: #63ACBB;
 
+}
 .produtoClientesCentral{
     display: flex;
     align-items: center;

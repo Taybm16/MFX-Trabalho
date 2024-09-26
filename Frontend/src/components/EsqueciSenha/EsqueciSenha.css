@@ -5,14 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 9%;
+    margin-top: 80px;
     background-color: #0C1618;
     width: 100%;
   }
 
-  .containerEsqueciSenhafilho1 {
-    width: 450px;
-  }
 
   .containerEsqueciSenhafilho1 button{
     border: none;
@@ -20,10 +17,8 @@
     
   .containerainerEsqueciSenhafilho2 {
   
-    border-radius: 10px ;
-    border: 1px  ;
+    border-radius: 15px ;
     width: 450px;
-    padding: 20px;
     text-shadow: none;
   
   }
@@ -37,7 +32,6 @@
   
   .containerEsqueciSenhafilho2 .inputEsqueciSenha-field{
     position: relative ;
-    width: 100%;
     height: 50px;
     margin: 20px auto;
   
@@ -47,12 +41,11 @@
     width: 100%;
     height: 100%;
     background-color: #63ACBB;
-    border-radius: 20px;
+    border-radius: 15px;
     outline: none;
     border: none;
     font-size: 16px;
     color: #0C1618;
-    padding: 20px 50px ;
     text-align: center;
   }
   
@@ -64,8 +57,7 @@
   .containerEsqueciSenhafilho2 .recallEsqueciSenha-forget{
     display: flex;
     color: #63ACBB;
-    justify-content: space-between;
-    margin: 10px  0  15px;
+   
     
   }
   
@@ -83,13 +75,12 @@
   }
   .containerEsqueciSenhafilho2 button{
     width: 100%;
-    height: 50px;
     border-radius: 20px;
     background-color: #63ACBB;
     border-color: #0C1618;
     cursor: pointer;
     font-size: 16px;
-    font-family: 250px;
+    
     
   }
   
@@ -108,5 +99,5 @@
   }
 
   .formulario{
-    width: 300px;
+    width: 450px;
   }

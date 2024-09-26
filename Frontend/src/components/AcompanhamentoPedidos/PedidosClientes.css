@@ -7,21 +7,24 @@
     margin: 40px;
     height: fit-content;
 
-    h2{
-        text-align: start;
-        text-transform: uppercase;
+}
 
-    }
+h2{
+    text-align: center;
+    text-transform: uppercase;
+   
+
+
+}
+.CardRelatorioPedidos{
+   
     p{
         margin: 10px 0px;
         text-transform: uppercase;
     }
-    
-
-
 }
 
-.produtoClientes{
+.ProdutoClientesCard{
     display: flex;
     align-items: center;
     gap: 25px;
@@ -39,3 +42,5 @@
         width: 300px;
     }
 }
+
+
