@@ -32,7 +32,7 @@ const EsqueciSenha = () =>{
                     />  
                 </div>
                 <div className="inputEsqueciSenha-field">
-                    <input type="senha" placeholder="Senha"
+                    <input type="senha" placeholder="Senha" 
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>

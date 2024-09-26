@@ -4,8 +4,11 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    /* padding: 150px; */
+   
     padding: 100px;
 
 }
 
+.ButtonsFilhos{
+    width:450px
+}

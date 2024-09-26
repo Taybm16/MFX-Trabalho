@@ -3,6 +3,8 @@ import './carrinhoComponente.css';
 
 
 function carrinho() {
+
+    
   return (
     <div className='carrinhoPai'>
         <h1>Seu Carrinho</h1>

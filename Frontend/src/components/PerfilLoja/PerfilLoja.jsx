@@ -10,11 +10,11 @@ function PerfilLoja() {
           
           <div className="PerfilLoja1">
             <h3>PERFIL ADMINISTRADOR</h3>
-            <input type="name" placeholder="Nome da Loja" />
-            <input type="email" placeholder="Endereço de E-mail" />
-            <input type="number" placeholder="CNPJ da Loja"/>
+            <input type="name" placeholder="Nome da Loja" /><br></br>
+            <input type="email" placeholder="Endereço de E-mail" /><br></br>
+            <input type="number" placeholder="CNPJ da Loja"/><br></br>
 
-            <input type="password" placeholder="Senha" />
+            <input type="password" placeholder="Senha" /><br></br>
             <input type="password" placeholder="Confirmar Senha" />
           </div>
 

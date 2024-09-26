@@ -1,10 +1,11 @@
 .PedidosComponentePai {
 
     background-color: #63ACBB;
-    border-radius: 5%;
+    border-radius: 15px;
     width: 100%;
-    padding: 25px;
+    padding: 35px;
     margin: 40px;
+    height: fit-content;
 
     h2{
         text-align: start;
@@ -27,16 +28,18 @@
     display: flex;
     align-items: center;
     gap: 25px;
+   
 
     img{
-        width: 100px;
+        width: 150px;
     }
     h3{
-        margin: 0px;
+        margin: 30px;
         font-weight: 900;
     }
     p{
         font-size: 12px;
         width: 300px;
+        margin: 30px;
     }
 }
