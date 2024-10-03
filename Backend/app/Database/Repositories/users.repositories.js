@@ -1,10 +1,10 @@
 import db from '../Database/connect.db.js'
 
-export const searchLogin = () =>{
+export const searchUsers = () =>{
 
     return new Promise((resolve, reject) => {
 
-        let query = 'SELECT * FROM login'
+        let query = 'SELECT * FROM users'
 
         db.all(query, [], (error, row) => {
             if(error){
@@ -18,4 +18,4 @@ export const searchLogin = () =>{
     }
 )}
 
-console.log(searchLogin())
+console.log(searchUsers())
