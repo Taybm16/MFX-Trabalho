@@ -21,10 +21,43 @@ function CriarConta() {
     };
 
     // Manipulador para o envio do formulário
-    const handleSubmit = (event) => {
+    const handleSubmit = async(event) => {
         event.preventDefault();
+
+        if (senha !== confirmarSenha) {
+            setError('As senhas não coincidem.');
+            return;
+        }
+    
+        // Reseta o erro ao tentar criar a conta
+        setError('');
+    
+        try {
+            const response = await fetch('http://localhost:3000/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: nome, email:email, password: senha, tipoConta }),
+            });
+    
+            if (!response.ok) {
+                const data = await response.json();
+                setError(data.error || 'Erro ao criar conta.');
+            } else {
+                // Conta criada com sucesso, redirecionar ou mostrar uma mensagem
+                console.log('Conta criada com sucesso!');
+            }
+        } catch (error) {
+            setError('Erro ao criar conta: ' + error.message);
+        }
+
         // Adicionar a lógica para enviar os dados para o servidor
     };
+
+     // Verifica se as senhas coincidem
+ 
+};
 
     return (
         <div className='divCriarContaPai'>
@@ -82,6 +115,6 @@ function CriarConta() {
             </div>
         </div>
     );
-}
+
 
 export default CriarConta;

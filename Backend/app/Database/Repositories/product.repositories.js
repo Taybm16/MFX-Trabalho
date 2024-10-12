@@ -1,10 +1,10 @@
-import db from '../connect.db.js'
+import db from "../connect.db.js"
 
-export const searchUsers = () =>{
+export const searchProducts = () =>{
 
     return new Promise((resolve, reject) => {
 
-        let query = 'SELECT * FROM users'
+        let query = 'SELECT * FROM products'
 
         db.all(query, [], (error, row) => {
             if(error){
@@ -18,12 +18,10 @@ export const searchUsers = () =>{
     }
 )}
 
-
-
-export const searchUsersByCPF = (cpf)=>{
+export const searchProductsByName = (name)=>{
     return new Promise((resolve, reject)=>{
 
-        let query = `SELECT * FROM user where user.cpf = ${cpf}`
+        let query = `SELECT * FROM products where products.name = ${name}`
 
         db.all(query, [],  (error, row)=>{
             if (error) {
@@ -37,12 +35,12 @@ export const searchUsersByCPF = (cpf)=>{
 
 
 
-export const insertNewRegisterUser = (name, cpf, status, created_at , update_at ) => {
+export const insertNewRegisterProducts = (name, description, image_url,amount, quantity) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `INSERT INTO user (name, cpf, status, created_at, update_at) VALUES (?, ?, ?, ?, ?)`
-        let params = [name, cpf, status, created_at , update_at ]
+        let query = `INSERT INTO products (name, description, image_url,amount, quantity) VALUES (?, ?, ?, ?, ?)`
+        let params = [name, description, image_url,amount, quantity]
     
         db.run(query, params, (error) => {
             if (error) {
@@ -53,7 +51,7 @@ export const insertNewRegisterUser = (name, cpf, status, created_at , update_at 
                         console.error(error.message);
                         reject()
                     }else{
-                        console.log('Usuario registrado com sucesso:')
+                        console.log('Produto registrado com sucesso:')
                         resolve(row)
                     }
                 })
@@ -65,31 +63,33 @@ export const insertNewRegisterUser = (name, cpf, status, created_at , update_at 
 
 
 
-
-export const updateUserInfo = (code, name, cpf, status, update_at) => {
+export const updateProductsInfo = (code, name, description, image_url,amount, quantity) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `UPDATE user SET 
+        let query = `UPDATE products SET 
                                     name=?, 
-                                    cpf=?, 
-                                    status=?, 
-                                    update_at=? 
-                                    WHERE user.code=${code}`;
-        let params = [name, cpf, status, update_at];
+                                    description=?, 
+                                    image_url=?, 
+                                    amount=?,
+                                    quantity=? 
+                                    WHERE products.code=${code}`;
+
+        let params = [code, name, description, image_url,amount, quantity];
     
         db.run(query, params, (error, changes) => {
             if (error) {
                 reject({message: err.message});
             }else{
                 if(changes === 0){
-                    reject({message: 'user is not found!'})
+                    reject({message: 'Product is not found!'})
                 }else{
                     resolve({
                         name: name,
-                        cpf: cpf,
-                        status: status,
-                        update_at: update_at
+                         description:description, 
+                         image_url:image_url, 
+                         amount:amount,
+                         quantity:quantity, 
                     })
                 }
             }
@@ -101,20 +101,20 @@ export const updateUserInfo = (code, name, cpf, status, update_at) => {
 // updateUserInfo("3","Eduardo","41441212864","Active", "05/10/2024")
 
 
-export const deleteUser = (cpf) => {
+export const deleteProducts = (id) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `DELETE FROM user WHERE user.cpf=?`;
+        let query = `DELETE FROM products WHERE products.id=?`;
     
-        db.run(query, [cpf], (error, changes) => {
+        db.run(query, [id], (error, changes) => {
             if (error) {
-                reject({message: 'user is not found!'});
+                reject({message: 'Product is not found!'});
             }else{
                 if(changes === 0){
                     reject({message: 'Deletado com sucesso!'})
                     resolve({
-                        cpf: cpf
+                        id: id
                     });
                 }
             }
@@ -122,3 +122,5 @@ export const deleteUser = (cpf) => {
 
     });
 };
+
+
