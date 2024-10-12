@@ -4,16 +4,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "node ./app/server.js",
+    "start": "node ./app/server.js",
     "formatter": "prettier --log-level warn --write \"./**/*{jsx,js,css,html,json}\""
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "fastify": "^4.28.1"
+    "fastify": "^4.28.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "prettier": "^3.3.3"

@@ -9,3 +9,4 @@ const db = new sqlite3.Database(dbPath, (error) => {
 });
 
 export default db;
+
