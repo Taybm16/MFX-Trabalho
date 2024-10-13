@@ -1,20 +1,19 @@
 import db from '../connect.db.js'; // Importa a conexão com o banco de dados
-import {  insertNewRegisterUser, searchUsers, updateUserInfo, deleteUser } from '../Database/Repositories/users.repositories.js';
-import { insertNewRegisterLogin } from '../Database/Repositories/login.repositories.js'
+import { searchLogin, insertNewRegisterLogin ,updateLoginInfo, deleteLogin } from '../Database/Repositories/login.repositories.js'
 
 
 // Função para registrar as rotas
  export default async function userRoutes(fastify, opts) {
 
      // GET: Obter todos os usuários
-     fastify.get('/users', async (request, reply) => {
+     fastify.get('/login', async (request, reply) => {
 
         searchLogin()
         
     });
 
     // POST: Adicionar um novo usuário
-    fastify.post('/users', async (request, reply) => {
+    fastify.post('/login', async (request, reply) => {
          // 
          const { password,created_at,update_at,status,email} = request.body;
 

@@ -10,6 +10,7 @@ function CriarConta() {
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
     const [tipoConta, setTipoConta] = useState('');
+    const [error, setError] = useState(''); // Adding error state
 
     // Manipulador para alterações nos campos
     const handleChange = (event) => {
@@ -21,7 +22,7 @@ function CriarConta() {
     };
 
     // Manipulador para o envio do formulário
-    const handleSubmit = async(event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         if (senha !== confirmarSenha) {
@@ -38,7 +39,7 @@ function CriarConta() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name: nome, email:email, password: senha, tipoConta }),
+                body: JSON.stringify({ name: nome, email: email, password: senha, tipoConta }),
             });
     
             if (!response.ok) {
@@ -49,15 +50,9 @@ function CriarConta() {
                 console.log('Conta criada com sucesso!');
             }
         } catch (error) {
-            setError('Erro ao criar conta: ' + error.message);
+            //setError('Erro ao criar conta: ' + error.message);
         }
-
-        // Adicionar a lógica para enviar os dados para o servidor
     };
-
-     // Verifica se as senhas coincidem
- 
-};
 
     return (
         <div className='divCriarContaPai'>
@@ -72,6 +67,7 @@ function CriarConta() {
                 {/* Colocar o formulario de cadastro  */}
                 <form onSubmit={handleSubmit}>
                     <h1>Criar Conta</h1>
+                    {error && <p className="error-message">{error}</p>} {/* Display error messages */}
                     <div className="input-field">
                         <input
                             type='text'
@@ -115,6 +111,6 @@ function CriarConta() {
             </div>
         </div>
     );
-
+}
 
 export default CriarConta;

@@ -1,5 +1,8 @@
-import db from '../connect.db.js'; // Importa a conexão com o banco de dados
-import {  insertNewRegisterUser, searchUsers, updateUserInfo, deleteUser } from '../Database/Repositories/users.repositories.js';
+import db from '../Database/connect.db.js';
+
+
+ // Importa a conexão com o banco de dado
+ import { insertNewRegisterUser, searchUsers, updateUserInfo, deleteUser } from '../Database/Repositories/users.repositories.js';
 import { insertNewRegisterLogin } from '../Database/Repositories/login.repositories.js'
 
 
@@ -14,7 +17,7 @@ export default async function userRoutes(fastify, opts) {
     });
 
     // POST: Adicionar um novo usuário
-         fastify.post('/users', async (request, reply) => {
+    fastify.post('/users', async (request, reply) => {
        // 
        const { name, email, cpf, status, created_at , update_at,password } = request.body;
 
@@ -25,7 +28,7 @@ export default async function userRoutes(fastify, opts) {
 
          }
         insertNewRegisterUser(name, cpf, status, created_at , update_at );
-         insertNewRegisterLogin( password,created_at,update_at,status,email)
+        insertNewRegisterLogin( password,created_at,update_at,status,email)
     });
 
 

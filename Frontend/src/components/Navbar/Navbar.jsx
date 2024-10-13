@@ -7,9 +7,10 @@ function Navbar(){
 
     return(
         <nav id = "navbar">
-           <img src={NerdHouse} alt="" />
+           <img src={NerdHouse} alt="" width={250}/>
+           
             <div id = "icones">
-                <Link to={"/"}><button  > <FontAwesomeIcon icon={faEnvelope} /> <span>Home</span> </button></Link>
+                <Link to={"/"}><button> <div className="IconeDiv">  <div><FontAwesomeIcon icon={faEnvelope} /></div> <div><span>Home</span></div> </div> </button></Link>
                 <Link to={"/Livraria"}><button ><FontAwesomeIcon icon={faBook} /><span>Livraria</span></button></Link>
                 <Link to={"/Ebooks"}><button ><FontAwesomeIcon icon={faTabletScreenButton} /> <span>Ebooks</span></button></Link>
                 

@@ -1,4 +1,6 @@
-import db from '../connect.db.js'
+import db from '../connect.db.js'; // Ajuste o caminho conforme necessário
+
+
 
 export const searchUsers = () =>{
 
@@ -35,9 +37,10 @@ export const searchUsersByCPF = (cpf)=>{
         })
 })}
 
+// console.log(searchUsers("35866777827"))
 
 
-export const insertNewRegisterUser = (name, cpf, status, created_at , update_at ) => {
+export const insertNewRegisterUser = (name, cpf, status, created_at , update_at  ) => {
 
     return new Promise ((resolve, reject) => {
         
@@ -63,7 +66,11 @@ export const insertNewRegisterUser = (name, cpf, status, created_at , update_at 
     })
 }
 
+// console.log(searchUsers("35866777827"))
 
+// insertNewRegisterUser ('Gislena Alchangelo','11532095864','Ativa','04/10/2024','04/10/2024').then()
+
+// console.log(user)
 
 
 export const updateUserInfo = (code, name, cpf, status, update_at) => {
@@ -80,7 +87,7 @@ export const updateUserInfo = (code, name, cpf, status, update_at) => {
     
         db.run(query, params, (error, changes) => {
             if (error) {
-                reject({message: err.message});
+                reject({message: error.message});
             }else{
                 if(changes === 0){
                     reject({message: 'user is not found!'})
@@ -101,20 +108,20 @@ export const updateUserInfo = (code, name, cpf, status, update_at) => {
 // updateUserInfo("3","Eduardo","41441212864","Active", "05/10/2024")
 
 
-export const deleteUser = (cpf) => {
+export const deleteUser = (id) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `DELETE FROM user WHERE user.cpf=?`;
+        let query = `DELETE FROM user WHERE user.id=?`;
     
-        db.run(query, [cpf], (error, changes) => {
+        db.run(query, [id], (error, changes) => {
             if (error) {
                 reject({message: 'user is not found!'});
             }else{
                 if(changes === 0){
                     reject({message: 'Deletado com sucesso!'})
                     resolve({
-                        cpf: cpf
+                        id: id
                     });
                 }
             }

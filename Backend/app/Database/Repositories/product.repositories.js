@@ -1,4 +1,7 @@
-import db from "../connect.db.js"
+import db from '../connect.db.js'; // Ajuste o caminho conforme necessário
+
+
+// import db from "../connect.db.js"
 
 export const searchProducts = () =>{
 

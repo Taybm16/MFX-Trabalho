@@ -1,4 +1,6 @@
-import db from '../connect.db.js'
+import db from '../connect.db.js'; // Ajuste o caminho conforme necessário
+
+
 
 export const searchLogin = () =>{
 
