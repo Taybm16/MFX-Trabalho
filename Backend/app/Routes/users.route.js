@@ -13,22 +13,21 @@ export default async function userRoutes(fastify, opts) {
     fastify.get('/users', async (request, reply) => {
 
         searchUsers()
-        
+
     });
 
     // POST: Adicionar um novo usuário
     fastify.post('/users', async (request, reply) => {
        // 
-       const { name, email, cpf, status, created_at , update_at,password } = request.body;
+       const { name, cpf, status, created_at , update_at} = request.body;
 
        // Verificamos se todos os campos obrigatórios foram enviados
-        if (!name || !email || !cpf) {
+        if (!name || !cpf) {
            // Se algum campo estiver faltando, retornamos um erro 400 (requisição malformada)
            return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
 
          }
         insertNewRegisterUser(name, cpf, status, created_at , update_at );
-        insertNewRegisterLogin( password,created_at,update_at,status,email)
     });
 
 
@@ -43,7 +42,7 @@ export default async function userRoutes(fastify, opts) {
          updateUserInfo(id)
 
      });
-        
+
 
      // DELETE: Deletar um usuário
      fastify.delete('/users/:id', async (request, reply) => {
@@ -52,6 +51,6 @@ export default async function userRoutes(fastify, opts) {
 
 
          deleteUser(id)
-       
+
      });
  }

@@ -26,13 +26,13 @@ import { searchLogin, insertNewRegisterLogin ,updateLoginInfo, deleteLogin } fro
          }
          
          insertNewRegisterLogin( password,created_at,update_at,status,email)
-        //  insertNewRegisterUser(name, cpf, status, created_at , update_at );
+
      });
 
 
 
      // PUT: Atualizar um usuário existente
-     fastify.put('/users/:id', async (request, reply) => {
+     fastify.put('/login/:id', async (request, reply) => {
          
          const { id } = request.params; 
          const { password,created_at,update_at,status,email} = request.body; 
@@ -42,7 +42,7 @@ import { searchLogin, insertNewRegisterLogin ,updateLoginInfo, deleteLogin } fro
         
 
     // DELETE: Deletar um usuário    
-    fastify.delete('/users/:id', async (request, reply) => {
+    fastify.delete('/login/:id', async (request, reply) => {
          // No DELETE, o cliente envia o ID do usuário que deseja excluir
          const { id } = request.params; // Pegamos o ID a partir dos parâmetros da URL
 

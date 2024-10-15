@@ -25,7 +25,7 @@ export const searchUsers = () =>{
 export const searchUsersByCPF = (cpf)=>{
     return new Promise((resolve, reject)=>{
 
-        let query = `SELECT * FROM user where user.cpf = ${cpf}`
+        let query = `SELECT * FROM users where users.cpf = ${cpf}`
 
         db.all(query, [],  (error, row)=>{
             if (error) {
@@ -40,13 +40,13 @@ export const searchUsersByCPF = (cpf)=>{
 // console.log(searchUsers("35866777827"))
 
 
-export const insertNewRegisterUser = (name, cpf, status, created_at , update_at  ) => {
+export const insertNewRegisterUser = (name, cpf, status, created_at , update_at) => {
 
     return new Promise ((resolve, reject) => {
-        
-        let query = `INSERT INTO user (name, cpf, status, created_at, update_at) VALUES (?, ?, ?, ?, ?)`
-        let params = [name, cpf, status, created_at , update_at ]
-    
+
+        let query = `INSERT INTO users (name, cpf, status, created_at, update_at) VALUES (?, ?, ?, ?, ?)`
+        let params = [name, cpf, status, created_at , update_at]
+
         db.run(query, params, (error) => {
             if (error) {
                 console.error(error.message);
@@ -66,6 +66,7 @@ export const insertNewRegisterUser = (name, cpf, status, created_at , update_at 
     })
 }
 
+
 // console.log(searchUsers("35866777827"))
 
 // insertNewRegisterUser ('Gislena Alchangelo','11532095864','Ativa','04/10/2024','04/10/2024').then()
@@ -77,12 +78,12 @@ export const updateUserInfo = (code, name, cpf, status, update_at) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `UPDATE user SET 
+        let query = `UPDATE users SET 
                                     name=?, 
                                     cpf=?, 
                                     status=?, 
                                     update_at=? 
-                                    WHERE user.code=${code}`;
+                                    WHERE users.code=${code}`;
         let params = [name, cpf, status, update_at];
     
         db.run(query, params, (error, changes) => {
@@ -112,7 +113,7 @@ export const deleteUser = (id) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `DELETE FROM user WHERE user.id=?`;
+        let query = `DELETE FROM users WHERE users.id=?`;
     
         db.run(query, [id], (error, changes) => {
             if (error) {

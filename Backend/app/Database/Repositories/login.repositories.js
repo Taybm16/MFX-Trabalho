@@ -10,6 +10,7 @@ export const searchLogin = () =>{
 
         db.all(query, [], (error, row) => {
             if(error){
+                
                 console.error(error.message)    
             }else{
                 console.log(row)
