@@ -1,52 +1,59 @@
-import db from '../connect.db.js'; // Importa a conexão com o banco de dados
-import { searchLogin, insertNewRegisterLogin ,updateLoginInfo, deleteLogin } from '../Database/Repositories/login.repositories.js'
+import { searchLogin, insertNewRegisterLogin, updateLoginInfo, deleteLogin } from '../Database/Repositories/login.repositories.js';
 
+export default async function loginRoutes(fastify, opts) {
 
-// Função para registrar as rotas
- export default async function userRoutes(fastify, opts) {
-
-     // GET: Obter todos os usuários
-     fastify.get('/login', async (request, reply) => {
-
-        searchLogin()
-        
+    // GET: Obter todos os logins
+    fastify.get('/login', async (request, reply) => {
+        try {
+            const logins = await searchLogin();
+            return reply.send(logins);
+        } catch (error) {
+            console.error(error);
+            return reply.status(500).send({ error: 'Erro ao obter logins.' });
+        }
     });
 
-    // POST: Adicionar um novo usuário
+    // POST: Adicionar um novo login
     fastify.post('/login', async (request, reply) => {
-         // 
-         const { password,created_at,update_at,status,email} = request.body;
+        const { password, created_at, update_at, status, email } = request.body;
 
-         // Verificamos se todos os campos obrigatórios foram enviados
-         if ( !email || !password) {
-            // Se algum campo estiver faltando, retornamos um erro 400 (requisição malformada)
+        if (!email || !password) {
             return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
+        }
 
-
-         }
-         
-         insertNewRegisterLogin( password,created_at,update_at,status,email)
-
-     });
-
-
-
-     // PUT: Atualizar um usuário existente
-     fastify.put('/login/:id', async (request, reply) => {
-         
-         const { id } = request.params; 
-         const { password,created_at,update_at,status,email} = request.body; 
-         updateLoginInfo(id)
-
+        try {
+            const newLogin = await insertNewRegisterLogin(password, created_at, update_at, status, email);
+            return reply.status(201).send(newLogin);
+        } catch (error) {
+            console.error(error);
+            return reply.status(500).send({ error: 'Erro ao criar login.' });
+        }
     });
-        
 
-    // DELETE: Deletar um usuário    
+    // PUT: Atualizar um login existente
+    fastify.put('/login/:id', async (request, reply) => {
+        const { id } = request.params;
+        const { password, created_at, update_at, status, email } = request.body;
+
+        try {
+            const updatedLogin = await updateLoginInfo(id, password, created_at, update_at, status, email);
+            return reply.send(updatedLogin); // Retorna o login atualizado
+        } catch (error) {
+            console.error(error);
+            return reply.status(500).send({ error: error.message });
+        }
+    });
+
+    // DELETE: Deletar um login
     fastify.delete('/login/:id', async (request, reply) => {
-         // No DELETE, o cliente envia o ID do usuário que deseja excluir
-         const { id } = request.params; // Pegamos o ID a partir dos parâmetros da URL
+        const { id } = request.params;
 
-         deleteLogin(id)
-       
-     });
+        try {
+            await deleteLogin(id);
+            return reply.status(204).send(); // Retorna 204 No Content após deletar
+        } catch (error) {
+            console.error(error);
+            return reply.status(500).send({ error: error.message });
+        }
+    });
 }

@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import NerdHouse from "../../assets/Images/Nerd-house-logo.png";
 import "./CriarConta.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Alterar useHistory para useNavigate
 
 function CriarConta() {
-    // Estado para armazenar os valores dos campos
+    const navigate = useNavigate(); // Usar useNavigate
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [confirmarSenha, setConfirmarSenha] = useState('');
-    const [tipoConta, setTipoConta] = useState('');
-    const [error, setError] = useState(''); // Adding error state
+    const [error, setError] = useState('');
 
-    // Manipulador para alterações nos campos
     const handleChange = (event) => {
         const { name, value } = event.target;
         if (name === 'nome') setNome(value);
@@ -21,7 +19,6 @@ function CriarConta() {
         if (name === 'confirmarSenha') setConfirmarSenha(value);
     };
 
-    // Manipulador para o envio do formulário
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -29,28 +26,36 @@ function CriarConta() {
             setError('As senhas não coincidem.');
             return;
         }
-    
-        // Reseta o erro ao tentar criar a conta
+
+        if (!nome || !email || !senha || !confirmarSenha) {
+            setError('Por favor, preencha todos os campos.');
+            return;
+        }
+
         setError('');
-    
+
+        const createdAt = new Date().toISOString();
+        const updatedAt = new Date().toISOString();
+        const status = 'Ativo';
+
         try {
-            const response = await fetch('http://localhost:3000/users', {
+            const response = await fetch('http://localhost:3000/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name: nome, email: email, password: senha, tipoConta }),
+                body: JSON.stringify({ name: nome, email: email, password: senha, created_at: createdAt, update_at: updatedAt, status }),
             });
-    
+
             if (!response.ok) {
                 const data = await response.json();
                 setError(data.error || 'Erro ao criar conta.');
             } else {
-                // Conta criada com sucesso, redirecionar ou mostrar uma mensagem
                 console.log('Conta criada com sucesso!');
+                navigate('/login'); // Usar navigate em vez de history.push
             }
         } catch (error) {
-            //setError('Erro ao criar conta: ' + error.message);
+            setError('Erro ao criar conta: ' + error.message);
         }
     };
 
@@ -64,10 +69,9 @@ function CriarConta() {
                 </Link>
             </div>
             <div className='divfilho2'>
-                {/* Colocar o formulario de cadastro  */}
                 <form onSubmit={handleSubmit}>
                     <h1>Criar Conta</h1>
-                    {error && <p className="error-message">{error}</p>} {/* Display error messages */}
+                    {error && <p className="error-message">{error}</p>}
                     <div className="input-field">
                         <input
                             type='text'
@@ -105,7 +109,7 @@ function CriarConta() {
                     </div>
 
                     <div className='botões'>
-                        <button type='submit' onClick={() => setTipoConta('cliente')}>Criar Conta Cliente</button>
+                        <button type='submit'>Criar Conta</button>
                     </div>
                 </form>
             </div>

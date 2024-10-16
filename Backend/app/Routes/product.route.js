@@ -1,56 +1,62 @@
-import db from "../connect.db.js"
-import {  searchProducts, insertNewRegisterProducts, updateProductsInfo,deleteProducts  } from '../Database/Repositories/product.repositories.js';
-
+import { searchProducts, insertNewRegisterProducts, updateProductsInfo, deleteProducts } from '../Database/Repositories/product.repositories.js';
 
 // Função para registrar as rotas
-export default async function userRoutes(fastify, opts) {
+export default async function productsRoutes(fastify, opts) {
 
-    // GET: Obter todos os usuários
+    // GET: Obter todos os produtos
     fastify.get('/products', async (request, reply) => {
-        
-
-        searchProducts()
-       
-        
-    });
-
-    // POST: Adicionar um novo produto
-    fastify.post('/products', async (request, reply) => {
-        // No POST, esperamos que o cliente envie um novo usuário para ser adicionado
-        const { name, description, image_url,amount, quantity } = request.body; // Pegamos os dados enviados no corpo da requisição
-
-        // Verificamos se todos os campos obrigatórios foram enviados
-        if (!name || !description || !amount ) {
-            // Se algum campo estiver faltando, retornamos um erro 400 (requisição malformada)
-            return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
-
-
+        try {
+            const products = await searchProducts();
+            reply.send(products); // Retorna os produtos encontrados
+        } catch (error) {
+            console.error(error);
+            reply.status(500).send({ error: 'Erro ao buscar produtos.' });
         }
-        insertNewRegisterProducts(name, description, image_url,amount, quantity)
-    
     });
 
+ // POST: Adicionar um novo produto
+fastify.post('/products', async (request, reply) => {
+    const { name, description, image_url, amount, quantity } = request.body;
 
+    if (!name || !description || !amount || !quantity || !image_url) {
+        return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
+    }
+
+    try {
+        const result = await insertNewRegisterProducts(name, description, image_url, amount, quantity);
+        reply.status(201).send(result); // Responda com o resultado
+    } catch (error) {
+        console.error('Erro ao inserir produto:', error);
+        reply.status(500).send({ error: 'Erro ao adicionar produto.' });
+    }
+});
+
+    
 
     // PUT: Atualizar um produto existente
     fastify.put('/products/:id', async (request, reply) => {
-       
         const { id } = request.params;
-        const { name, description, image_url,amount, quantity} = request.body; 
+        const { name, description, image_url, amount, quantity } = request.body;
 
-
-        updateProductsInfo(id)
-
+        try {
+            const updatedProduct = await updateProductsInfo(id, name, description, image_url, amount, quantity);
+            reply.send(updatedProduct); // Retorna o produto atualizado
+        } catch (error) {
+            console.error(error);
+            reply.status(500).send({ error: 'Erro ao atualizar produto.' });
+        }
     });
-        
 
     // DELETE: Deletar um Produto
     fastify.delete('/products/:id', async (request, reply) => {
-        // No DELETE, o cliente envia o ID do usuário que deseja excluir
-        const { id } = request.params; // Pegamos o ID a partir dos parâmetros da URL
+        const { id } = request.params;
 
-
-        deleteProducts(id)
-       
+        try {
+            await deleteProducts(id);
+            reply.send({ message: 'Produto deletado com sucesso!' }); // Confirma a exclusão
+        } catch (error) {
+            console.error(error);
+            reply.status(500).send({ error: 'Erro ao deletar produto.' });
+        }
     });
 }

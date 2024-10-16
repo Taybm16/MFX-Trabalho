@@ -1,8 +1,88 @@
-.DivPaidoPai{
+.DivPaidoPai {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 10px;
+    gap: 15px;
+    margin-top: 60px;
+}
+
+.CardDivPai {
+    border: 5px solid white;
+    background-color: #104b57;
+    border-radius: 15px;
+    width: 300px;
+    height: 600px; /* Altura do card */
+    position: relative; /* Necessário para posicionar os botões */
+}
+
+.configCard {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Espaço entre os itens */
+    height: 100%; /* Faz com que o card ocupe toda a altura */
+}
+
+.CardDescricao {
+    text-align: center;
+    color: #63ACBB;
+    padding: 10px; /* Adiciona padding ao redor do conteúdo */
+    flex-grow: 1; /* Permite que esta seção ocupe o espaço restante */
+}
+
+.configimgCard {
+    width: 100%;
+    height: 250px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    background-color: #ccc; /* Cor de fundo caso a imagem não carregue */
+}
+
+.BotoesCardProduct {
+    display: flex;
+    position: absolute; /* Mantém a posição absoluta */
+    bottom: 10px; /* Distância do fundo do card */
+    left: 50%; /* Move o início do botão para o meio do card */
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    gap: 5px; /* Espaçamento entre os botões */
+}
+
+.BotoesCardProduct button {
+    background-color: #63ACBB;
+    color: #0C1618;
+    height: 45px;
+    width: 140px; /* Largura do botão */
+}
+
+.CardProdutosText {
+    margin: 5px 0; /* Espaço entre os textos */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .DivPaidoPai{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
     margin-top: 60px;
     
     
@@ -13,7 +93,7 @@
     background-color: #104b57;
     border-radius: 15px;
     width: 300px;
-    height: 760px ;
+    height: 600px ;
     
     
 }
@@ -40,7 +120,7 @@
 .BotoesCardProduct{
     display: flex;
     position: absolute;
-    bottom: -300px;
+    bottom: -100px;
     width: 100%;
    
     margin-left: 2px;
@@ -101,4 +181,4 @@
 
 
 
-
+ */

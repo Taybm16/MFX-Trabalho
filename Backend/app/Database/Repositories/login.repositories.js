@@ -1,41 +1,33 @@
 import db from '../connect.db.js'; // Ajuste o caminho conforme necessário
 
-
-
-export const searchLogin = () =>{
-
+export const searchLogin = () => {
     return new Promise((resolve, reject) => {
-
-        let query = 'SELECT * FROM login'
-
-        db.all(query, [], (error, row) => {
-            if(error){
-                
-                console.error(error.message)    
-            }else{
-                console.log(row)
-                resolve(row)
-            }
-        
-        })
-    }
-)}
-
-
-export const searchUsersByCPF = (id)=>{
-    return new Promise((resolve, reject)=>{
-
-        let query = `SELECT * FROM login where login.id = ${id}`
-
-        db.all(query, [],  (error, row)=>{
+        let query = 'SELECT * FROM login';
+        db.all(query, [], (error, rows) => {
             if (error) {
-                console.error(error.message)
-            }else{
-                console.log(row)
-                resolve(row)
+                console.error(error.message);
+                return reject(error); // Rejeitar a promessa se houver erro
+            } 
+            console.log(rows);
+            resolve(rows);
+        });
+    });
+};
+
+export const searchUsersByCPF = (id) => {
+    return new Promise((resolve, reject) => {
+        let query = `SELECT * FROM login WHERE login.id = ?`;
+        db.get(query, [id], (error, row) => {
+            if (error) {
+                console.error(error.message);
+                return reject(error);
             }
-        })
-})}
+            console.log(row);
+            resolve(row);
+        });
+    });
+};
+
 export const insertNewRegisterLogin = (password, created_at, update_at, status, email) => {
     return new Promise((resolve, reject) => {
         let query = `INSERT INTO login (password, created_at, update_at, status, email) VALUES (?, ?, ?, ?, ?)`;
@@ -51,95 +43,50 @@ export const insertNewRegisterLogin = (password, created_at, update_at, status, 
                     console.error(error.message);
                     return reject(error);
                 }
-                console.log('Login registrado com sucesso:');
+                console.log('Login registrado com sucesso:', row);
                 resolve(row);
             });
         });
     });
 };
-// 
-// export const insertNewRegisterLogin = (password,created_at,update_at,status,email ) => {
 
-//     return new Promise ((resolve, reject) => {
-        
-//         let query = `INSERT INTO login (password,created_at,update_at,status,email) VALUES (?, ?, ?, ?, ?)`
-//         let params = [password,created_at,update_at,status,email]
-    
-//         db.run(query, params, (error) => {
-//             if (error) {
-//                 console.error(error.message);
-//             }else{
-//                 db.get('SELECT last_insert_rowid() as id', (error, row)=> {
-//                     if (error){
-//                         console.error(error.message);
-//                         reject()
-//                     }else{
-//                         console.log('Login registrado com sucesso:')
-//                         resolve(row)
-//                     }
-//                 })
-//             }
-//         })
-
-//     })
-// }
-
-
-export const updateLoginInfo = (password,created_at,update_at,status,email) => {
-
-    return new Promise ((resolve, reject) => {
-        
+export const updateLoginInfo = (id, password, created_at, update_at, status, email) => {
+    return new Promise((resolve, reject) => {
         let query = `UPDATE login SET 
-                                    password=?, 
-                                    created_at=?, 
-                                    status=?, 
-                                    update_at=?,
-                                    email=?,
-                                    WHERE login.code=${code}`;
-        let params = [password,created_at,update_at,status,email];
-    
-        db.run(query, params, (error, changes) => {
+                     password=?, 
+                     created_at=?, 
+                     update_at=?, 
+                     status=?, 
+                     email=? 
+                     WHERE id=?`; // Utilizar 'id' para atualização
+        let params = [password, created_at, update_at, status, email, id];
+
+        db.run(query, params, function (error) {
             if (error) {
-                reject({message: err.message});
-            }else{
-                if(changes === 0){
-                    reject({message: 'Login is not found!'})
-                }else{
-                    resolve({
-                        password: password,
-                        created_at:created_at,
-                        email: email,
-                        status: status,
-                        update_at: update_at
-                    })
-                }
+                console.error(error.message);
+                return reject(error);
             }
-        })
-
-    })
-}
-
-
-
+            if (this.changes === 0) {
+                return reject({ message: 'Login not found!' });
+            }
+            resolve({ id, password, created_at, status, update_at, email });
+        });
+    });
+};
 
 export const deleteLogin = (id) => {
-
-    return new Promise ((resolve, reject) => {
+    return new Promise((resolve, reject) => {
+        let query = `DELETE FROM login WHERE id=?`;
         
-        let query = `DELETE FROM login WHERE login.id=?`;
-    
-        db.run(query, [id], (error, changes) => {
+        db.run(query, [id], function (error) {
             if (error) {
-                reject({message: 'Login is not found!'});
-            }else{
-                if(changes === 0){
-                    reject({message: 'Deletado com sucesso!'})
-                    resolve({
-                        id: id
-                    });
-                }
+                console.error(error.message);
+                return reject({ message: 'Error deleting login.' });
             }
+            if (this.changes === 0) {
+                return reject({ message: 'Login not found!' });
+            }
+            resolve({ id });
         });
-
     });
 };

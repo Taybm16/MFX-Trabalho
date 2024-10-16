@@ -43,9 +43,10 @@ export const searchUsersByCPF = (cpf)=>{
 export const insertNewRegisterUser = (name, cpf, status, created_at , update_at) => {
 
     return new Promise ((resolve, reject) => {
-
+        
         let query = `INSERT INTO users (name, cpf, status, created_at, update_at) VALUES (?, ?, ?, ?, ?)`
-        let params = [name, cpf, status, created_at , update_at]
+        let params = [name, cpf, status, created_at , update_at ]
+    
 
         db.run(query, params, (error) => {
             if (error) {
@@ -109,20 +110,20 @@ export const updateUserInfo = (code, name, cpf, status, update_at) => {
 // updateUserInfo("3","Eduardo","41441212864","Active", "05/10/2024")
 
 
-export const deleteUser = (id) => {
+export const deleteUser = (cpf) => {
 
     return new Promise ((resolve, reject) => {
         
-        let query = `DELETE FROM users WHERE users.id=?`;
+        let query = `DELETE FROM users WHERE users.cpf=?`;
     
-        db.run(query, [id], (error, changes) => {
+        db.run(query, [cpf], (error, changes) => {
             if (error) {
                 reject({message: 'user is not found!'});
             }else{
                 if(changes === 0){
                     reject({message: 'Deletado com sucesso!'})
                     resolve({
-                        id: id
+                        cpf: cpf
                     });
                 }
             }

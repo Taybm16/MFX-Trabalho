@@ -2,8 +2,8 @@ import db from '../Database/connect.db.js';
 
 
  // Importa a conexão com o banco de dado
- import { insertNewRegisterUser, searchUsers, updateUserInfo, deleteUser } from '../Database/Repositories/users.repositories.js';
-import { insertNewRegisterLogin } from '../Database/Repositories/login.repositories.js'
+import { insertNewRegisterUser, searchUsers, updateUserInfo, deleteUser } from '../Database/Repositories/users.repositories.js';
+
 
 
 // // Função para registrar as rotas

@@ -12,11 +12,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "fastify": "^4.28.1",
+    "@fastify/cors": "^7.0.0",
+    "fastify": "^3.0.0",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "prettier": "^3.3.3"
   }
 }
-
