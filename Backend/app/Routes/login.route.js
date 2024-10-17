@@ -56,4 +56,32 @@ export default async function loginRoutes(fastify, opts) {
             return reply.status(500).send({ error: error.message });
         }
     });
+
+
+ // POST: Autenticar um login existente
+ fastify.post('/login/authenticate', async (request, reply) => {
+    const { email, password } = request.body;
+
+    if (!email || !password) {
+        return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
+    }
+
+    try {
+        const logins = await searchLogin();
+        const user = logins.find(user => user.email === email && user.password === password);
+
+        if (!user) {
+            return reply.status(401).send({ error: 'Credenciais inválidas.' });
+        }
+
+        return reply.send({ message: 'Login bem-sucedido', user });
+    } catch (error) {
+        console.error(error);
+        return reply.status(500).send({ error: 'Erro ao autenticar.' });
+    }
+});
+
+
+
+
 }
