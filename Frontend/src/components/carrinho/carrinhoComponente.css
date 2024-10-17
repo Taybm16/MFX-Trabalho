@@ -2,10 +2,13 @@
     background-color: #104b57;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
+    padding:20px;
+    width: 100%;
+    align-self: center;
+    margin-right: 40px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    
 }
 
 h1 {
@@ -21,12 +24,12 @@ h1 {
 .carrinhoNeto1 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
   
 .carrinhoDescritivo1 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #63ACBB;
 }
   
@@ -73,12 +76,14 @@ h1 {
     
     background-color: #63ACBB;
     color: #0C1618;
-    width: 80px;
+    width: 60px;
     
 }
+
 .AreaDeItens{
     align-self: flex-end;
 }
+
 .carrinhoNeto2 button{
     background-color: #63ACBB;
     color: #0C1618;

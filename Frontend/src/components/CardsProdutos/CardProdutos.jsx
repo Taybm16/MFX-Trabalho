@@ -28,7 +28,7 @@ function CardsProdutos() {
             {dados.map((dado) => (
                 <div className='CardDivPai' key={dado.id}>
                     <div className='configCard'>
-                        <img className='configimgCard' src={dado.image_url} alt={dado.name} width={200} />
+                        <img className='configimgCard' src={dado.image_url} alt={dado.name}  />
                         <div className='CardDescricao'>
                             <h3 className='CardProdutosText'>{dado.name}</h3>
                             <p className='CardProdutosText'>R${dado.amount}</p>
