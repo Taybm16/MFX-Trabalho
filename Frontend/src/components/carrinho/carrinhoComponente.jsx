@@ -6,6 +6,8 @@ function CarrinhoComponente({ produtos }) {
         return produtos.reduce((total, produto) => total + (produto.amount || 0), 0).toFixed(2);
     };
 
+    
+
     return (
         <div className='carrinhoPai'>
             <h1>Seu Carrinho</h1>
