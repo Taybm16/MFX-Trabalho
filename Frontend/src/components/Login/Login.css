@@ -1,47 +1,40 @@
-
- 
-
-.containerpai{
+.containerpai {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 60px;
   background-color: #0C1618;
   width: 100%;
-  
-  
 }
-
-
 
 .containerfilho2 {
-
-  border-radius: 40px ;
-  border: 1px  ;
+  border-radius: 40px;
   width: 450px;
-  
   text-shadow: none;
-
-
-
 }
 
-.containerfilho2 h1{
+.containerfilho2 h1 {
   text-align: center;
   font-size: 30px;
   color: #63ACBB;
-  
 }
 
-.containerfilho2 .input-field{
-  position: relative ;
+.containerfilho2 .input-field {
+  position: relative;
   width: 100%;
   height: 50px;
   margin: 20px auto;
-
-
 }
-.input-field input{
+
+.input-field .input-icon {
+  position: absolute;
+  left: 15px; /* Ajuste a posição do ícone */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0C1618; /* Cor do ícone */
+}
+
+.input-field input {
   width: 100%;
   height: 100%;
   background-color: #63ACBB;
@@ -50,64 +43,53 @@
   border: none;
   font-size: 16px;
   color: #0C1618;
-  padding: 20px 50px ;
-
+  padding: 20px 50px 20px 40px; /* Ajustado para dar espaço ao ícone */
 }
 
-.input-field input::placeholder{
+.input-field input::placeholder {
   color: #0C1618;
- 
 }
 
-.containerfilho2 .recall-forget{
+.containerfilho2 .recall-forget {
   display: flex;
   color: #63ACBB;
   justify-content: space-between;
-  margin: 10px  0  15px;
-  
+  margin: 10px 0 15px;
 }
 
 .recall-forget a,
-.signup-link p a{
-  color:#63ACBB;
+.signup-link p a {
+  color: #63ACBB;
   text-decoration: none;
-
 }
 
 .recall-forget a:hover,
-.signup-link p a:hover{
+.signup-link p a:hover {
   text-decoration: underline;
-
 }
 
-.containerfilho1 button{
-  border: none ;
-
-  
+.containerfilho1 button {
+  border: none;
 }
 
-
-.containerfilho2 button{
+.containerfilho2 button {
   width: 100%;
   height: 50px;
   border-radius: 20px;
   background-color: #63ACBB;
-  border-color: #0C1618;
   cursor: pointer;
   font-size: 16px;
-  font-family: 250px;
-  
 }
 
-.containerfilho2 .signup-link{
+.containerfilho2 .signup-link {
   color: #63ACBB;
   font-size: 15px;
   text-align: center;
   margin: 20px 0 10px;
-
 }
-.LoginBotão{
+
+.LoginBotão {
   font-size: 15px;
-    text-align: center;
-    color: #0C1618;
+  text-align: center;
+  color: #0C1618;
 }

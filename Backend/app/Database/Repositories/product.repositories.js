@@ -1,5 +1,7 @@
 import db from '../connect.db.js';
 
+
+
 // Função para buscar todos os produtos
 export const searchProducts = () => {
     return new Promise((resolve, reject) => {

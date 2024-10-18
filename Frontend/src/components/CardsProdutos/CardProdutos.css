@@ -10,8 +10,8 @@
     border: 5px solid white;
     background-color: #104b57;
     border-radius: 15px;
-    width: 300px;
-    height: 750px; /* Altura do card */
+    width: 250px;
+    height: 700px; /* Altura do card */
     position: relative; /* Necessário para posicionar os botões */
 }
 
@@ -54,7 +54,7 @@
 }
 
 .CardProdutosText {
-    margin: 5px 0; /* Espaço entre os textos */
+    margin: 10px 0; /* Espaço entre os textos */
 }
 
 

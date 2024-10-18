@@ -1,56 +1,58 @@
-import db from '../Database/connect.db.js';
 
-
- // Importa a conexão com o banco de dado
 import { insertNewRegisterUser, searchUsers, updateUserInfo, deleteUser } from '../Database/Repositories/users.repositories.js';
 
-
-
-// // Função para registrar as rotas
+// Função para registrar as rotas
 export default async function userRoutes(fastify, opts) {
 
   // GET: Obter todos os usuários
-    fastify.get('/users', async (request, reply) => {
+  fastify.get('/users', async (request, reply) => {
+    try {
+      const users = await searchUsers();
+      reply.send(users);
+    } catch (error) {
+      reply.status(500).send({ error: 'Erro ao buscar usuários.' });
+    }
+  });
 
-        searchUsers()
+  // POST: Adicionar um novo usuário
+  fastify.post('/users', async (request, reply) => {
+    const { name, cpf, status, created_at, update_at } = request.body;
 
-    });
+    // Verificamos se todos os campos obrigatórios foram enviados
+    if (!name || !cpf) {
+      return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
+    }
 
-    // POST: Adicionar um novo usuário
-    fastify.post('/users', async (request, reply) => {
-       // 
-       const { name, cpf, status, created_at , update_at} = request.body;
+    try {
+      const newUser = await insertNewRegisterUser(name, cpf, status, created_at, update_at);
+      reply.status(201).send(newUser); // Retorna o novo usuário criado
+    } catch (error) {
+      reply.status(500).send({ error: 'Erro ao adicionar usuário.' });
+    }
+  });
 
-       // Verificamos se todos os campos obrigatórios foram enviados
-        if (!name || !cpf) {
-           // Se algum campo estiver faltando, retornamos um erro 400 (requisição malformada)
-           return reply.status(400).send({ error: 'Por favor, preencha todos os campos.' });
+  // PUT: Atualizar um usuário existente
+  fastify.put('/users/:id', async (request, reply) => {
+    const { id } = request.params;
+    const { name, email, cpf, status, created_at, update_at, password } = request.body;
 
-         }
-        insertNewRegisterUser(name, cpf, status, created_at , update_at );
-    });
+    try {
+      const updatedUser = await updateUserInfo(id, { name, email, cpf, status, created_at, update_at, password });
+      reply.send(updatedUser);
+    } catch (error) {
+      reply.status(500).send({ error: 'Erro ao atualizar usuário.' });
+    }
+  });
 
+  // DELETE: Deletar um usuário
+  fastify.delete('/users/:cpf', async (request, reply) => {
+    const { cpf } = request.params;
 
-
-     // PUT: Atualizar um usuário existente
-     fastify.put('/users/:id', async (request, reply) => {
-        // No PUT, esperamos que o cliente envie um ID de um usuário para atualizar, junto com os novos dados
-        const { id } = request.params; // Pegamos o ID do usuário a partir dos parâmetros da URL
-         const {  name, email, cpf, status, created_at , update_at,password} = request.body; // Pegamos os novos dados enviados no corpo da requisição
-
-
-         updateUserInfo(id)
-
-     });
-
-
-     // DELETE: Deletar um usuário
-     fastify.delete('/users/:id', async (request, reply) => {
-         // No DELETE, o cliente envia o ID do usuário que deseja excluir
-         const { id } = request.params; // Pegamos o ID a partir dos parâmetros da URL
-
-
-         deleteUser(id)
-
-     });
- }
+    try {
+      await deleteUser(cpf);
+      reply.status(204).send(); // No content
+    } catch (error) {
+      reply.status(500).send({ error: 'Erro ao deletar usuário.' });
+    }
+  });
+}

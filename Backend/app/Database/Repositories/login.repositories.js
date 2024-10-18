@@ -1,5 +1,6 @@
 import db from '../connect.db.js'; // Ajuste o caminho conforme necessário
 
+
 export const searchLogin = () => {
     return new Promise((resolve, reject) => {
         let query = 'SELECT * FROM login';
@@ -28,15 +29,15 @@ export const searchUsersByCPF = (id) => {
     });
 };
 
-export const insertNewRegisterLogin = (password, created_at, update_at, status, email) => {
+export const insertNewRegisterLogin = (email, password, created_at, update_at, status) => {
     return new Promise((resolve, reject) => {
-        let query = `INSERT INTO login (password, created_at, update_at, status, email) VALUES (?, ?, ?, ?, ?)`;
-        let params = [password, created_at, update_at, status, email];
+        let query = `INSERT INTO login (user_id, password, created_at, update_at, status) VALUES (?, ?, ?, ?, ?)`;
+        let params = [email, password, created_at, update_at, status];
 
         db.run(query, params, function (error) {
             if (error) {
                 console.error(error.message);
-                return reject(error); // Rejeitar a promessa se houver erro
+                return reject(error);
             }
             db.get('SELECT last_insert_rowid() as id', (error, row) => {
                 if (error) {
@@ -49,6 +50,29 @@ export const insertNewRegisterLogin = (password, created_at, update_at, status, 
         });
     });
 };
+
+
+// export const insertNewRegisterLogin = (password, created_at, update_at, status, email) => {
+//     return new Promise((resolve, reject) => {
+//         let query = `INSERT INTO login (password, created_at, update_at, status, email) VALUES (?, ?, ?, ?, ?)`;
+//         let params = [password, created_at, update_at, status, email];
+
+//         db.run(query, params, function (error) {
+//             if (error) {
+//                 console.error(error.message);
+//                 return reject(error); // Rejeitar a promessa se houver erro
+//             }
+//             db.get('SELECT last_insert_rowid() as id', (error, row) => {
+//                 if (error) {
+//                     console.error(error.message);
+//                     return reject(error);
+//                 }
+//                 console.log('Login registrado com sucesso:', row);
+//                 resolve(row);
+//             });
+//         });
+//     });
+// };
 
 export const updateLoginInfo = (id, password, created_at, update_at, status, email) => {
     return new Promise((resolve, reject) => {

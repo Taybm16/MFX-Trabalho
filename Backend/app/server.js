@@ -2,10 +2,9 @@ import Fastify from 'fastify';
 import userRoutes from './Routes/users.route.js';
 import productsRoutes from './Routes/product.route.js';
 import loginRoutes from './Routes/login.route.js';
+import addressRoutes from './Routes/address.routes.js'; 
 
-const fastify = Fastify({
-    logger: true,
-});
+const fastify = Fastify({ logger: true });
 
 // Habilitando CORS
 fastify.register(import('@fastify/cors'), {
@@ -16,7 +15,8 @@ fastify.register(import('@fastify/cors'), {
 // Registrando as rotas
 fastify.register(userRoutes);
 fastify.register(productsRoutes);
-fastify.register(loginRoutes); // Aqui é onde você registra as rotas de login
+fastify.register(loginRoutes);
+fastify.register(addressRoutes); // Certifique-se de que este seja chamado apenas uma vez
 
 fastify.listen({ port: 3000 }, (err, address) => {
     if (err) {

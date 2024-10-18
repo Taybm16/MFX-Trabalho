@@ -3,15 +3,20 @@ import "./ClientesCentral.css";
 import Geek from "../../assets/Images/geek.jpg";
 
 function ClientesCentral() {
-  const [dados, mudardados] = useState([]);
+  const [dados, setDados] = useState([]);
 
   const PegarAPI = useCallback(async () => {
-    const dadosAPI = await fetch('https://fakestoreapi.com/users')
-      .then(resposta => resposta.json())
-      .then(info => info);
-
-    mudardados(dadosAPI);
-    console.log(dadosAPI);
+    try {
+      const response = await fetch('http://localhost:3000/users'); // Atualize a URL conforme necessário
+      if (!response.ok) {
+        throw new Error('Erro ao buscar usuários');
+      }
+      const dadosAPI = await response.json();
+      setDados(dadosAPI);
+      console.log(dadosAPI);
+    } catch (error) {
+      console.error('Erro ao buscar dados:', error);
+    }
   }, []);
 
   useEffect(() => {
@@ -23,10 +28,8 @@ function ClientesCentral() {
       <h2>Relatório de Clientes da Loja</h2>
       {dados.map((dado) => (
         <div className='PedidosClientesCentralPai' key={dado.id}>
-          
           <div className='PedidosClientesCentral'>
             <p>Cliente:</p>
-            
             <div className='produtoClientesCentral'>
               <img src={Geek} alt="" />
               <div>
